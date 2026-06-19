@@ -1,20 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Imran Jahid Khan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imran Jahid Khan</title>
+  <meta name="description" content="Imran Jahid Khan — PhD student researching Cyber-Physical Systems, Reinforcement Learning, and Cybersecurity." />
+  <meta name="author" content="Imran Jahid Khan" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Imran Jahid Khan" />
+  <meta property="og:description" content="PhD student — Cyber-Physical Systems, Reinforcement Learning, Cybersecurity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ijk37.com" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-    <h1>Imran Jahid Khan</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <p>MS Student, Information Systems and Computer Security</p>
+  <div class="layout">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+      <img class="avatar" src="assets/profile.svg" alt="Photo of Imran Jahid Khan" />
+      <h1 class="name">Imran Jahid Khan</h1>
+      <p class="tagline">PhD Student<br />Information Systems &amp; Computer Security</p>
+      <!-- TODO: replace with your university / lab once enrolled -->
+      <p class="affiliation">Your University · Your Lab</p>
 
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Cyber-Physical Systems</li>
-        <li>Reinforcement Learning</li>
-        <li>Cybersecurity</li>
-    </ul>
+      <nav class="links" aria-label="Profile links">
+        <a href="mailto:jahidmebuet@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2V4zm10 7L3.5 5.5h17L12 11zm0 2.2L3 7.3V18h18V7.3l-9 5.9z"/></svg>
+          Email
+        </a>
+        <!-- TODO: add your real profile URLs -->
+        <a href="#" title="Google Scholar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 8l11 6 9-4.9V17h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
+          Scholar
+        </a>
+        <a href="https://github.com/ijk37" title="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C5.9 1 1 5.9 1 12c0 4.9 3.2 9 7.6 10.4.6.1.8-.2.8-.5v-2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5C19.8 21 23 16.9 23 12 23 5.9 18.1 1 12 1z"/></svg>
+          GitHub
+        </a>
+        <a href="#" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9V9z"/></svg>
+          LinkedIn
+        </a>
+        <a href="assets/cv.pdf" title="Curriculum Vitae">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3h8v1.5H8V15zm0 3h5v1.5H8V18z"/></svg>
+          CV
+        </a>
+      </nav>
+    </aside>
 
-    <p>Website under construction.</p>
+    <!-- ===================== MAIN ===================== -->
+    <main id="main" class="content">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I am a PhD student working at the intersection of
+          <strong>cyber-physical systems</strong>, <strong>reinforcement learning</strong>,
+          and <strong>cybersecurity</strong>. My research explores how learning-based agents
+          can make critical infrastructure more secure, resilient, and trustworthy &mdash;
+          including work that combines AI and blockchain for cyber-physical systems.
+        </p>
+        <!-- TODO: personalize this paragraph: prior degrees, advisor, what drives your research. -->
+        <p>
+          Previously, I completed my undergraduate studies in engineering. I am broadly
+          interested in building systems that are both intelligent and verifiable.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <ul class="interests">
+          <li><span>Cyber-Physical Systems</span> — security, resilience, and control of networked physical infrastructure.</li>
+          <li><span>Reinforcement Learning</span> — sequential decision-making for autonomous and adaptive systems.</li>
+          <li><span>Cybersecurity</span> — defending critical systems against adversarial threats.</li>
+          <li><span>AI + Blockchain</span> — trustworthy, decentralized coordination for CPS.</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <!-- TODO: fill in real venue, year, authors, and links. Duplicate a <li> per paper. -->
+        <ol class="pubs">
+          <li>
+            <span class="pub-title">AI- and Blockchain-Enabled Security for Cyber-Physical Systems</span>
+            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, et al.</span>
+            <span class="pub-venue">In submission / working paper, 2026.</span>
+            <span class="pub-meta-links">
+              <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a>
+            </span>
+          </li>
+        </ol>
+        <p class="muted">More coming soon.</p>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <!-- TODO: keep your latest updates here. -->
+          <li><time>2026</time> Launched my academic website.</li>
+          <li><time>2026</time> Working on AI + blockchain security for cyber-physical systems.</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          The best way to reach me is by email at
+          <a href="mailto:jahidmebuet@gmail.com">jahidmebuet@gmail.com</a>.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Imran Jahid Khan · Built with plain HTML/CSS · Hosted on GitHub Pages</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
