@@ -200,6 +200,21 @@ p { margin: 0 0 14px; }
 .pub-venue { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
 .pub-meta-links { font-size: 0.88rem; margin-top: 4px; }
 
+/* Scholarships & Fellowships */
+.awards { list-style: none; padding: 0; margin: 0; }
+.awards li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.awards li:last-child { border-bottom: none; }
+.award-title { font-weight: 600; }
+.award-org { font-size: 0.92rem; color: var(--text-muted); }
+.award-status { font-weight: 600; }
+.award-status.accepted { color: var(--accent); }
+
 /* News */
 .news { list-style: none; padding: 0; margin: 0; }
 .news li {
