@@ -70,6 +70,12 @@
           </svg>
           CV
         </a>
+        <a href="#awards" title="Achievements">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 2H6v2H2v4c0 2.2 1.8 4 4 4 .7 1.5 2 2.6 3.5 3v2.5H7V21h10v-2.5h-2.5V17c1.5-.4 2.8-1.5 3.5-3 2.2 0 4-1.8 4-4V4h-4V2zM6 10c-1.1 0-2-.9-2-2V6h2v4zm14-2c0 1.1-.9 2-2 2V6h2v2z" />
+          </svg>
+          Achievements
+        </a>
       </nav>
     </aside>
 
@@ -120,9 +126,44 @@
         </ul>
       </section>
 
-      <section id="publications">
-        <h2>Publications</h2>
-        <h3 class="pub-group">Peer-Reviewed</h3>
+      <section id="activity">
+        <div class="tabs" role="tablist" aria-label="News, publications, and conference activity">
+          <button class="tab is-active" id="tab-news" role="tab" aria-controls="panel-news"
+            aria-selected="true">News</button>
+          <button class="tab" id="tab-pubs" role="tab" aria-controls="panel-pubs"
+            aria-selected="false">Publications</button>
+          <button class="tab" id="tab-conf" role="tab" aria-controls="panel-conf"
+            aria-selected="false">Conference</button>
+        </div>
+
+        <div class="tab-panel is-active" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
+          <ul class="news">
+            <li><time>2026</time> Paper "Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
+              Reinforcement Learning CartPole Testbed" presented by Dr. Mohammad Arafatur Rahman at the AIIoT
+              Conference in Seattle, WA.</li>
+            <li><time>2026</time> Completed the second semester at Tuskegee University with a perfect 4.00/4.00 GPA.
+            </li>
+            <li><time>2026</time> Paper published at the 9th International Conference on Information and Computer
+              Technologies (ICICT).</li>
+            <li><time>2026</time> Paper accepted for presentation at the AIIoT Conference.</li>
+            <li><time>2025</time> Completed the first semester at Tuskegee University with a perfect 4.00/4.00 GPA.
+            </li>
+            <li><time>2025</time> Presented research poster at the AWS-MLU AI/ML Fall Teaching and Research
+              Symposium.</li>
+            <li><time>2025</time> Joined Tuskegee University as a Graduate Teaching Assistant, working with Dr. K.</li>
+            <li><time>2025</time> Joined Tuskegee University as a Graduate Research Assistant, under the supervision
+              of Dr. Mohammad Arafatur Rahman.</li>
+            <li><time>2025</time> Began M.S. studies in Information Systems and Computer Security at Tuskegee
+              University.</li>
+            <li><time>2025</time> Awarded a full scholarship for M.S. studies at Tuskegee University.</li>
+            <li><time>2025</time> Selected for the Japan Human Resources Development Scholarship (JDS).</li>
+            <li><time>2025</time> Awarded a full scholarship at Williams College (M.A. in Policy Economics).</li>
+            <li><time>2024</time> Awarded the Prime Minister's Fellowship (Government of Bangladesh).</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-pubs" role="tabpanel" aria-labelledby="tab-pubs" hidden>
+          <h3 class="pub-group">Peer-Reviewed</h3>
         <ol class="pubs">
           <li>
             <span class="pub-title">Detection of Integrity Attacks in Cloud-Based Cyber-Physical Systems (CBCPS)
@@ -166,21 +207,22 @@
             <span class="pub-venue"><span class="pub-status">Under review</span> · ICMLA Conference, 2026</span>
           </li>
         </ol>
-      </section>
+        </div>
 
-      <section id="presentations">
-        <h2>Conference Presentations</h2>
-        <ul class="awards">
+        <div class="tab-panel" id="panel-conf" role="tabpanel" aria-labelledby="tab-conf" hidden>
+          <ul class="awards">
           <li>
             <span class="award-title">Poster — AWS-MLU AI/ML Fall Teaching and Research Symposium &amp; Student Poster
               Session</span>
             <span class="award-org">2025</span>
           </li>
-        </ul>
+          </ul>
+        </div>
       </section>
 
       <section id="awards">
-        <h2>Scholarships &amp; Fellowships</h2>
+        <h2>Achievements</h2>
+        <h3 class="pub-group">Scholarships &amp; Fellowships</h3>
         <ul class="awards">
           <li>
             <span class="award-title">Full Scholarship — M.S. in Information Systems &amp; Computer Security</span>
@@ -202,30 +244,6 @@
             <span class="award-title">Foreign Master's Scholarship</span>
             <span class="award-org">"Capacity Building of BCS Administration Academy (2nd Revised)" Project, Government of Bangladesh · 2024 · <span class="award-status">Awarded</span></span>
           </li>
-        </ul>
-      </section>
-
-      <section id="news">
-        <h2>News</h2>
-        <ul class="news">
-          <li><time>2026</time> Paper "Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
-            Reinforcement Learning CartPole Testbed" presented by Dr. Mohammad Arafatur Rahman at the AIIoT Conference
-            in Seattle, WA.</li>
-          <li><time>2026</time> Completed the second semester at Tuskegee University with a perfect 4.00/4.00 GPA.</li>
-          <li><time>2026</time> Paper published at the 9th International Conference on Information and Computer
-            Technologies (ICICT).</li>
-          <li><time>2026</time> Paper accepted for presentation at the AIIoT Conference.</li>
-          <li><time>2025</time> Completed the first semester at Tuskegee University with a perfect 4.00/4.00 GPA.</li>
-          <li><time>2025</time> Presented research poster at the AWS-MLU AI/ML Fall Teaching and Research Symposium.</li>
-          <li><time>2025</time> Joined Tuskegee University as a Graduate Teaching Assistant, working with Dr. K.</li>
-          <li><time>2025</time> Joined Tuskegee University as a Graduate Research Assistant, under the supervision of
-            Dr. Mohammad Arafatur Rahman.</li>
-          <li><time>2025</time> Began M.S. studies in Information Systems and Computer Security at Tuskegee University.
-          </li>
-          <li><time>2025</time> Awarded a full scholarship for M.S. studies at Tuskegee University.</li>
-          <li><time>2025</time> Selected for the Japan Human Resources Development Scholarship (JDS).</li>
-          <li><time>2025</time> Awarded a full scholarship at Williams College (M.A. in Policy Economics).</li>
-          <li><time>2024</time> Awarded the Prime Minister's Fellowship (Government of Bangladesh).</li>
         </ul>
       </section>
 
@@ -251,7 +269,29 @@
     </main>
   </div>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Tabbed activity section (News / Publications / Conference)
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-panel').forEach(function (p) {
+          p.classList.remove('is-active');
+          p.hidden = true;
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        var panel = document.getElementById(tab.getAttribute('aria-controls'));
+        panel.classList.add('is-active');
+        panel.hidden = false;
+      });
+    });
+  </script>
 </body>
 
 </html>

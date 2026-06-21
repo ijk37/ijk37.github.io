@@ -226,6 +226,44 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
+/* Tabbed activity section */
+.tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 18px;
+}
+.tab {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 16px;
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.tab:hover { color: var(--text); }
+.tab.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.tab-panel[hidden] { display: none; }
+.tab-panel { animation: tab-fade 0.22s ease; }
+@keyframes tab-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* News */
 .news { list-style: none; padding: 0; margin: 0; }
 .news li {
