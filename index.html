@@ -95,11 +95,11 @@
           noisy environments.
         </p>
         <p>
-          Before beginning graduate studies in the United States, I served in the Bangladesh Civil
-          Service, holding administrative and policy-making positions under the Ministry of Public
-          Administration, the Ministry of Land, and the Ministry of Commerce. My professional
-          experience in public administration and digital governance motivates my interest in
-          secure, trustworthy, and resilient intelligent systems.
+          I am a member of the <strong>Bangladesh Civil Service</strong>, currently on study leave
+          to pursue my graduate studies. Over my career I have held administrative and policy-making
+          positions under the Ministry of Public Administration, the Ministry of Land, and the
+          Ministry of Commerce. My professional experience in public administration and digital
+          governance motivates my interest in secure, trustworthy, and resilient intelligent systems.
         </p>
         <p>
           I received my B.Sc. in Mechanical Engineering from the
@@ -136,7 +136,8 @@
             aria-selected="false">Conference</button>
         </div>
 
-        <div class="tab-panel is-active" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
+        <div class="tab-panels">
+          <div class="tab-panel is-active" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
           <ul class="news">
             <li><time>2026</time> Paper "Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
               Reinforcement Learning CartPole Testbed" presented by Dr. Mohammad Arafatur Rahman at the AIIoT
@@ -153,12 +154,18 @@
             <li><time>2025</time> Joined Tuskegee University as a Graduate Teaching Assistant, working with Dr. K.</li>
             <li><time>2025</time> Joined Tuskegee University as a Graduate Research Assistant, under the supervision
               of Dr. Mohammad Arafatur Rahman.</li>
-            <li><time>2025</time> Began M.S. studies in Information Systems and Computer Security at Tuskegee
-              University.</li>
+            <li><time>2025</time> Took study leave from the Bangladesh Civil Service and began M.S. studies in
+              Information Systems and Computer Security at Tuskegee University.</li>
             <li><time>2025</time> Awarded a full scholarship for M.S. studies at Tuskegee University.</li>
             <li><time>2025</time> Selected for the Japan Human Resources Development Scholarship (JDS).</li>
             <li><time>2025</time> Awarded a full scholarship at Williams College (M.A. in Policy Economics).</li>
             <li><time>2024</time> Awarded the Prime Minister's Fellowship (Government of Bangladesh).</li>
+            <li><time>2024</time> Appointed Deputy Director (Senior Assistant Secretary), Export Promotion Bureau,
+              Ministry of Commerce.</li>
+            <li><time>2022</time> Posted as Assistant Commissioner (Land) &amp; Executive Magistrate, Ministry of
+              Land.</li>
+            <li><time>2019</time> Joined the Bangladesh Civil Service as Assistant Commissioner &amp; Executive
+              Magistrate, Ministry of Public Administration.</li>
           </ul>
         </div>
 
@@ -218,9 +225,10 @@
           </li>
           </ul>
         </div>
+        </div>
       </section>
 
-      <section id="awards">
+      <section id="awards" hidden>
         <h2>Achievements</h2>
         <h3 class="pub-group">Scholarships &amp; Fellowships</h3>
         <ul class="awards">
@@ -291,6 +299,19 @@
         panel.hidden = false;
       });
     });
+
+    // Achievements: hidden until the sidebar "Achievements" button is clicked
+    var achLink = document.querySelector('.links a[href="#awards"]');
+    var achSection = document.getElementById('awards');
+    if (achLink && achSection) {
+      achLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        achSection.hidden = !achSection.hidden;
+        if (!achSection.hidden) {
+          achSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
   </script>
 </body>
 
