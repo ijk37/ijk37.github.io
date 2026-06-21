@@ -226,6 +226,37 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
+/* Stand-alone sub-pages (e.g., Achievements) */
+.subpage {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 28px;
+}
+.back-link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.back-link:hover { color: var(--accent); text-decoration: none; }
+.subpage-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 0 0 26px;
+  letter-spacing: -0.01em;
+}
+.subpage-foot {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+@media (max-width: 760px) {
+  .subpage { padding: 32px 20px; }
+}
+
 /* Tabbed activity section */
 .tabs {
   display: inline-flex;
