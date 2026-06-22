@@ -31,7 +31,8 @@
   <div class="layout">
     <!-- ===================== SIDEBAR ===================== -->
     <aside class="sidebar">
-      <img class="avatar" src="assets/profile.jpg" alt="Photo of Imran Jahid Khan" />
+      <img class="avatar" src="assets/profile.jpg" alt="Photo of Imran Jahid Khan" width="300" height="300"
+        decoding="async" />
       <h1 class="name">Imran Jahid Khan</h1>
       <p class="tagline">Graduate Student<br />M.S. in Information Systems &amp; Computer Security</p>
       <p class="affiliation">Tuskegee University</p>
@@ -83,6 +84,10 @@
     <main id="main" class="content">
       <section id="about">
         <h2>About</h2>
+        <p class="research-summary">
+          I study how intelligent cyber-physical systems can remain secure, resilient, and dependable
+          when they operate under attacks, uncertainty, and noisy real-world conditions.
+        </p>
         <p>
           I am a Graduate Student in Information Systems and Computer Security at
           <strong>Tuskegee University</strong>. My research interests lie at the intersection of
@@ -129,11 +134,11 @@
       <section id="activity">
         <div class="tabs" role="tablist" aria-label="News, publications, and conference activity">
           <button class="tab is-active" id="tab-news" role="tab" aria-controls="panel-news"
-            aria-selected="true">News</button>
+            aria-selected="true" tabindex="0">News</button>
           <button class="tab" id="tab-pubs" role="tab" aria-controls="panel-pubs"
-            aria-selected="false">Publications</button>
+            aria-selected="false" tabindex="-1">Publications</button>
           <button class="tab" id="tab-conf" role="tab" aria-controls="panel-conf"
-            aria-selected="false">Conference</button>
+            aria-selected="false" tabindex="-1">Conference</button>
         </div>
 
         <div class="tab-panels">
@@ -180,10 +185,6 @@
             <span class="pub-authors">Mohammad Arafatur Rahman, <strong>Imran Jahid Khan</strong>, Fan Wu</span>
             <span class="pub-venue">Proceedings of the 2026 9th International Conference on Information and Computer
               Technologies (ICICT), pp. 533&ndash;538, 2026.</span>
-            <!-- TODO: replace # with real PDF / DOI / BibTeX links when available -->
-            <span class="pub-meta-links">
-              <a href="#">PDF</a> · <a href="#">DOI</a> · <a href="#">BibTeX</a>
-            </span>
           </li>
         </ol>
 
@@ -256,13 +257,13 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Tabbed activity section (News / Publications / Conference)
+    // Accessible tabbed activity section (News / Publications / Conference)
     var tabs = document.querySelectorAll('.tab');
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
+    function activateTab(tab, moveFocus) {
         tabs.forEach(function (t) {
           t.classList.remove('is-active');
           t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
         });
         document.querySelectorAll('.tab-panel').forEach(function (p) {
           p.classList.remove('is-active');
@@ -270,9 +271,28 @@
         });
         tab.classList.add('is-active');
         tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
         var panel = document.getElementById(tab.getAttribute('aria-controls'));
         panel.classList.add('is-active');
         panel.hidden = false;
+        if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () {
+        activateTab(tab, false);
+      });
+
+      tab.addEventListener('keydown', function (event) {
+        var nextIndex;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') nextIndex = 0;
+        if (event.key === 'End') nextIndex = tabs.length - 1;
+        if (nextIndex !== undefined) {
+          event.preventDefault();
+          activateTab(tabs[nextIndex], true);
+        }
       });
     });
   </script>

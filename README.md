@@ -7,16 +7,24 @@ Plain HTML + CSS (no build step). Auto-deployed to GitHub Pages via `.github/wor
 
 ## Structure
 - `index.html` — the page content (edit text/sections here)
+- `achievements.html` — scholarships, fellowships, and honors
 - `assets/style.css` — all styling (colors live in the `:root` variables at the top)
-- `assets/profile.svg` — placeholder avatar; replace with a real photo (`assets/profile.jpg`) and update the `<img src>` in `index.html`
-- `assets/cv.pdf` — add your CV here (the sidebar link points to it)
+- `assets/profile.jpg` — profile photo
+- `assets/cv.pdf` — CV linked from the sidebar
+- `cv-src/` — editable CV source; retained in the repository but not published
 - `CNAME` — custom domain (`ijk37.com`)
+- `.github/workflows/static.yml` — publishes only the public website files to GitHub Pages
 
 ## Editing
-Search `index.html` for `TODO:` comments — those mark the spots to personalize (affiliation, profile links, publications, news).
+Update biography, research, publications, news, and conference activity in `index.html`.
+Update scholarships and honors in `achievements.html`. Replace `assets/cv.pdf` whenever the CV changes.
+
+Publication buttons should only be added when their PDF, DOI, or BibTeX destination is available; do not use placeholder links.
 
 ## Local preview
 Open `index.html` directly in a browser, or run a static server:
 ```
 python -m http.server 8000
 ```
+
+Then visit `http://localhost:8000`.

@@ -154,6 +154,17 @@ p { margin: 0 0 14px; }
 
 .muted { color: var(--text-muted); font-size: 0.95rem; }
 
+.research-summary {
+  margin-bottom: 20px;
+  padding: 15px 18px;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--accent-soft);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+
 /* Research interests */
 .interests {
   list-style: none;
@@ -339,19 +350,34 @@ p { margin: 0 0 14px; }
 @media (max-width: 760px) {
   .layout {
     grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 32px 20px;
+    gap: 30px;
+    padding: 28px 18px;
   }
   .sidebar {
     position: static;
     top: auto;
   }
   .avatar { width: 140px; height: 140px; }
+  .name { margin-top: 14px; }
+  .affiliation { margin-bottom: 18px; }
   .links {
     flex-flow: row wrap;
     justify-content: center;
   }
-  .links a { flex: 0 1 auto; }
+  .links a { flex: 1 1 130px; justify-content: center; }
   .interests { grid-template-columns: 1fr; }
+  section { margin-bottom: 36px; }
+  .tabs { display: flex; width: 100%; }
+  .tab { flex: 1 1 0; padding: 9px 8px; font-size: 0.9rem; }
+  .tab-panels { padding: 16px 16px 10px; }
+  .news li { display: block; padding: 11px 0; }
+  .news time { display: block; width: auto; margin-bottom: 2px; }
+  .research-summary { font-size: 1.06rem; padding: 13px 15px; }
   body { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tab-panel { animation: none; }
+  .links a { transition: none; }
 }

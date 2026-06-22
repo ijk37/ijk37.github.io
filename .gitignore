@@ -6,3 +6,4 @@ cv-src/*.synctex.gz
 cv-src/*.fls
 cv-src/*.fdb_latexmk
 cv-src/build*.log
+cv-src/*.pdf
