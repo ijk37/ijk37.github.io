@@ -201,6 +201,12 @@ p { margin: 0 0 14px; }
   display: grid;
   gap: 8px;
 }
+.contact-list li {
+  padding: 10px 14px;
+  background: var(--accent-2-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
 .contact-list strong { color: var(--text); }
 
 /* Publications */
