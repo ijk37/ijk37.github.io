@@ -38,7 +38,7 @@ jobs:
         run: |
           mkdir -p _site/assets
           cp index.html achievements.html CNAME _site/
-          cp assets/style.css assets/profile.jpg assets/favicon.svg assets/cv.pdf _site/assets/
+          cp assets/style.css assets/profile.jpg assets/favicon.svg assets/IJK_CV_site.pdf _site/assets/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
