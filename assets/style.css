@@ -183,7 +183,7 @@ p { margin: 0 0 14px; }
 }
 .interests li {
   padding: 13px 16px;
-  background: var(--surface);
+  background: var(--accent-2-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 0.96rem;
@@ -244,35 +244,26 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
-/* Learning resources — prominent red call-to-action card */
-.resource-card {
+/* Learning resources — same card grid as Research Interests, but each card is a link */
+.resource-list li { padding: 0; background: none; border: none; }
+.resource-list a {
   display: block;
-  padding: 18px 22px;
-  border: 2px solid var(--accent-2);
-  border-radius: var(--radius);
+  padding: 13px 16px;
   background: var(--accent-2-soft);
-  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.96rem;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
-.resource-card:hover {
-  background: var(--accent-2);
+.resource-list a:hover {
   text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(216, 28, 49, 0.28);
-}
-.resource-card-title {
-  display: block;
-  font-weight: 700;
-  font-size: 1.12rem;
   color: var(--accent-2);
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(216, 28, 49, 0.18);
 }
-.resource-card-desc {
-  display: block;
-  font-size: 0.93rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-.resource-card:hover .resource-card-title,
-.resource-card:hover .resource-card-desc { color: #fff; }
 
 /* Stand-alone sub-pages (e.g., Achievements) */
 .subpage {
