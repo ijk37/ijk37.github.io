@@ -86,7 +86,7 @@ a:hover { text-decoration: underline; }
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--accent);
+  border: 4px solid var(--accent-2);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
   background: var(--surface);
 }
@@ -154,7 +154,7 @@ h2 {
   font-weight: 600;
   margin: 0 0 16px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid var(--accent-2);
 }
 
 p { margin: 0 0 14px; }
@@ -244,25 +244,35 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
-/* Learning resources */
-.resources { list-style: none; padding: 0; margin: 0; }
-.resources li {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-.resources li:last-child { border-bottom: none; }
-.resource-link {
-  display: inline-block;
-  font-weight: 600;
-  font-size: 1.02rem;
-  color: var(--accent);
-}
-.resource-desc {
+/* Learning resources — prominent red call-to-action card */
+.resource-card {
   display: block;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-top: 2px;
+  padding: 18px 22px;
+  border: 2px solid var(--accent-2);
+  border-radius: var(--radius);
+  background: var(--accent-2-soft);
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
+.resource-card:hover {
+  background: var(--accent-2);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(216, 28, 49, 0.28);
+}
+.resource-card-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: var(--accent-2);
+}
+.resource-card-desc {
+  display: block;
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.resource-card:hover .resource-card-title,
+.resource-card:hover .resource-card-desc { color: #fff; }
 
 /* Stand-alone sub-pages (e.g., Achievements) */
 .subpage {
