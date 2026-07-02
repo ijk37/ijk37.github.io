@@ -4,26 +4,32 @@
    =================================================================== */
 
 :root {
+  /* Palette inspired by the flag of Bangladesh:
+     bottle green (#006A4E) as the primary accent, flag red (#F42A41) as the highlight. */
   --bg: #ffffff;
-  --surface: #f7f8fa;
-  --text: #1a1d21;
-  --text-muted: #5b6470;
-  --accent: #1f6feb;
-  --accent-soft: #e8f0fe;
-  --border: #e4e7ec;
+  --surface: #edf5f0;
+  --text: #16241d;
+  --text-muted: #586b62;
+  --accent: #006a4e;
+  --accent-soft: #dceee6;
+  --accent-2: #d81c31;
+  --accent-2-soft: #fce7ea;
+  --border: #d7e5dd;
   --max-width: 1080px;
   --radius: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --text: #e6edf3;
-    --text-muted: #9aa5b1;
-    --accent: #4f9bff;
-    --accent-soft: #16243d;
-    --border: #232a33;
+    --bg: #0d1512;
+    --surface: #14211b;
+    --text: #e6efe9;
+    --text-muted: #93a89d;
+    --accent: #2fae82;
+    --accent-soft: #123027;
+    --accent-2: #ff5d6a;
+    --accent-2-soft: #35191c;
+    --border: #24322b;
   }
 }
 
@@ -39,6 +45,7 @@ body {
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  border-top: 4px solid var(--accent);
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -79,7 +86,7 @@ a:hover { text-decoration: underline; }
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--surface);
+  border: 4px solid var(--accent);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
   background: var(--surface);
 }
@@ -157,7 +164,7 @@ p { margin: 0 0 14px; }
 .research-summary {
   margin-bottom: 20px;
   padding: 15px 18px;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--accent-2);
   border-radius: 0 10px 10px 0;
   background: var(--accent-soft);
   font-family: "Newsreader", Georgia, serif;
@@ -296,7 +303,7 @@ p { margin: 0 0 14px; }
 .tab.is-active {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 1px 4px rgba(31, 111, 235, 0.35);
+  box-shadow: 0 1px 4px rgba(0, 106, 78, 0.35);
 }
 .tab:focus-visible {
   outline: 2px solid var(--accent);
@@ -334,7 +341,7 @@ p { margin: 0 0 14px; }
   width: 56px;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 /* Footer */
