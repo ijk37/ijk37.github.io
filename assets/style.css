@@ -183,7 +183,7 @@ p { margin: 0 0 14px; }
 }
 .interests li {
   padding: 13px 16px;
-  background: var(--accent-2-soft);
+  background: var(--accent-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 0.96rem;
@@ -255,7 +255,7 @@ p { margin: 0 0 14px; }
 .resource-list a {
   display: block;
   padding: 13px 16px;
-  background: var(--accent-2-soft);
+  background: var(--accent-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text);
@@ -265,10 +265,10 @@ p { margin: 0 0 14px; }
 }
 .resource-list a:hover {
   text-decoration: none;
-  color: var(--accent-2);
-  border-color: var(--accent-2);
+  color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(216, 28, 49, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 106, 78, 0.18);
 }
 
 /* Stand-alone sub-pages (e.g., Achievements) */
