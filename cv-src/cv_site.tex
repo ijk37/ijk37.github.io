@@ -1,0 +1,189 @@
+%==============================================================
+%  Imran Jahid Khan — Curriculum Vitae (SITE / PUBLIC version)
+%  Bangladesh-flag theme (green + red) to match ijk37.com.
+%  Excludes all GPA/CGPA. This is the version published on the site.
+%  Compile with: pdflatex cv_site.tex   (output: cv_site.pdf)
+%==============================================================
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.62in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Brand colors (match ijk37.com — Bangladesh flag) ----
+\definecolor{accent}{HTML}{006A4E}   % bottle green (primary)
+\definecolor{accent2}{HTML}{D81C31}  % flag red (highlight)
+\definecolor{dark}{HTML}{16241D}
+\definecolor{muted}{HTML}{586B62}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% ---- Section headings ----
+\titleformat{\section}
+  {\color{accent}\bfseries\large\scshape}{}{0em}{}[\color{accent}\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+% ---- Footer ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}Imran Jahid Khan \textemdash{} Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage}
+
+% ---- Helpers ----
+% \position{Title}{Dates}{Org / detail}
+\newcommand{\position}[3]{%
+  \textbf{#1}\hfill{\color{muted}\textit{#2}}\\
+  {\color{muted}#3}\par\vspace{1pt}}
+
+\begin{document}
+
+%================= HEADER =================
+\begin{center}
+  {\fontsize{22}{24}\selectfont\bfseries\color{dark} Imran Jahid Khan}\\[6pt]
+  {\color{accent2}\rule{1.4in}{1.4pt}}\\[6pt]
+  {\small
+    \faEnvelope~\href{mailto:jahidmebuet@gmail.com}{jahidmebuet@gmail.com}~~\textbullet~~
+    \faPhone~+1-334-552-2849~~\textbullet~~
+    \faLinkedin~\href{https://www.linkedin.com/in/ijk37/}{linkedin.com/in/ijk37}\\[3pt]
+    \faGlobe~\href{https://ijk37.com}{ijk37.com}~~\textbullet~~
+    \faGraduationCap~\href{https://scholar.google.com/citations?user=5VQULPEAAAAJ\&hl=en}{Google Scholar}~~\textbullet~~
+    \faMapMarker~Alabama, USA
+  }
+\end{center}
+\vspace{2pt}
+
+%================= RESEARCH INTERESTS =================
+\section{Research Interests}
+Cyber-Physical Systems \textbullet{} Reinforcement Learning \textbullet{} AI Security \& Robustness \textbullet{}
+Cybersecurity \textbullet{} Cloud-Based Control Systems \textbullet{} Resilient Autonomous Systems
+
+%================= EDUCATION =================
+\section{Education}
+\position{Tuskegee University, Alabama, USA}{Aug 2025 -- May 2027 (expected)}
+{M.S. in Information Systems and Computer Security}
+\vspace{3pt}
+\position{Bangladesh University of Engineering \& Technology (BUET), Dhaka}{2011 -- 2016}
+{B.Sc. in Mechanical Engineering}
+
+%================= PUBLICATIONS =================
+\section{Publications}
+\textbf{\color{muted}\footnotesize PEER-REVIEWED}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=3pt]
+  \item M.~A.~Rahman, \textbf{I.~J.~Khan}, and F.~Wu, ``Detection of Integrity Attacks in Cloud-Based
+  Cyber-Physical Systems (CBCPS) Using Long Short-Term Memory (LSTM) Models,'' in \textit{Proc.\ 2026 9th
+  International Conference on Information and Computer Technologies (ICICT)}, pp.~533--538, 2026.
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize ACCEPTED \& FORTHCOMING}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=3pt,start=2]
+  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Resilience Analysis of Cloud-Controlled
+  Cyber-Physical Systems Using a Reinforcement Learning CartPole Testbed,'' \textit{AIIoT Conference}, 2026.
+  (Accepted; presented at the conference in Seattle, WA.)
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize UNDER REVIEW}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=3pt,start=3]
+  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Blockchain-Anchored Detection and Recovery for
+  Resilient Reinforcement Learning-Based Cyber-Physical Systems,'' under review, \textit{7th Annual National HBCU
+  Blockchain, FinTech, and AI Conference}, Morgan State University, 2026.
+  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Reconstruction-Assisted DQN for Resilient
+  Cloud-Controlled Cyber-Physical Systems against Data Integrity Attacks,'' under review, \textit{ICMLA}, 2026.
+  \item M.~Hossain, \textbf{I.~J.~Khan}, M.~A.~Rahman, and F.~Wu, ``Evaluating Learning Efficiency and
+  Computational Trade-Offs in Classical and Quantum Reinforcement Learning Using a CartPole Testbed,''
+  under review, \textit{ICMLA}, 2026.
+\end{enumerate}
+
+%================= HONORS & SCHOLARSHIPS =================
+\section{Honors \& Scholarships}
+\begin{itemize}
+  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ in Information Systems and Computer Security,
+  Tuskegee University --- 2025 \textit{(accepted)}
+  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, for graduate study at
+  Hiroshima University --- 2025 \textit{(declined)}
+  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College --- 2025 \textit{(declined)}
+  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh --- 2024
+  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
+  Project, Government of Bangladesh --- 2024
+\end{itemize}
+
+%================= RESEARCH EXPERIENCE =================
+\section{Research Experience}
+\position{Graduate Research Assistant}{Aug 2025 -- present}
+{Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
+\begin{itemize}
+  \item Research the security and resilience of cloud-based cyber-physical systems, focusing on learning-based
+  control under adversarial and noisy conditions.
+  \item Developed LSTM-based detection of controller integrity and replay attacks in cloud-based CPS.
+  \item Built a reinforcement-learning CartPole testbed (DQN) for resilience analysis and reconstruction-assisted
+  recovery against data-integrity attacks; studied classical vs.\ quantum RL efficiency trade-offs.
+\end{itemize}
+\vspace{3pt}
+\position{Earlier Research Projects}{2016 -- 2023}
+{}
+\begin{itemize}
+  \item Impact of a Housing Project on Children's Lifestyle (2023).
+  \item Wind Turbine Blade Design for Optimum Power Output, B.Sc.\ thesis, BUET (2016).
+\end{itemize}
+
+%================= TEACHING EXPERIENCE =================
+\section{Teaching Experience}
+\position{Graduate Teaching Assistant}{Aug 2025 -- present}
+{Introduction to Computer Science, Dept.\ of Computer Science, Tuskegee University}
+
+%================= PRESENTATIONS =================
+\section{Presentations}
+\begin{itemize}
+  \item Poster, \textit{AWS-MLU AI/ML Fall Teaching and Research Symposium \& Student Poster Session}, 2025.
+\end{itemize}
+
+%================= PROFESSIONAL EXPERIENCE =================
+\section{Professional Experience \textnormal{\small\color{muted}(Bangladesh Civil Service)}}
+\position{Deputy Director (Senior Assistant Secretary)}{Sep 2024 -- Jul 2025}
+{Export Promotion Bureau, Ministry of Commerce}
+\begin{itemize}
+  \item Conducted export-policy analysis with data-driven recommendations and digitized trade-facilitation
+  processes with stakeholders.
+\end{itemize}
+\vspace{3pt}
+\position{Assistant Commissioner (Land) \& Executive Magistrate}{Nov 2022 -- Aug 2024}
+{Upazila Land Office, Patuakhali \& Bhola, Ministry of Land}
+\begin{itemize}
+  \item Managed digital public-land records and data-driven monitoring; adjudicated disputes and coordinated
+  field administration and digital reporting.
+\end{itemize}
+\vspace{3pt}
+\position{Assistant Commissioner \& Executive Magistrate}{Apr 2019 -- Nov 2022}
+{Office of the Deputy Commissioner, Cox's Bazar, Ministry of Public Administration}
+\begin{itemize}
+  \item Oversaw tourism facilitation, budget/HR management, and e-procurement; led disaster-relief and COVID-19
+  response using ICT for coordination.
+\end{itemize}
+
+%================= SKILLS =================
+\section{Technical Skills}
+\textbf{Programming:} Python, C, C++ \\[2pt]
+\textbf{ML / Methods:} Reinforcement Learning (DQN), Deep Learning (LSTM), data-driven anomaly detection \\[2pt]
+\textbf{Tools:} SolidWorks, SPSS, MS Office, Google Workspace, \LaTeX{}
+
+%================= STANDARDIZED TESTS =================
+\section{Standardized Tests}
+\textbf{GRE:} 322 \,(V 155, Q 167, AW 3.5) --- Dec 2024 \hfill
+\textbf{IELTS Academic:} 7.0 \,(L 8.0, R 7.5, W 6.5, S 6.5) --- Jan 2024
+
+%================= TRAINING =================
+\section{Professional Training}
+Law \& Administration, Public Procurement, Land Management, and Government Research ---
+BPATC, BCSAA, LATC, and BIGM (2019--2025).
+
+\end{document}

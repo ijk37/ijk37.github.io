@@ -7,3 +7,9 @@ cv-src/*.fls
 cv-src/*.fdb_latexmk
 cv-src/build*.log
 cv-src/*.pdf
+
+# Private academic CV (contains GPA/CGPA) — kept local only, never published
+cv-src/cv_academic.tex
+/IJK_CV_Academic.pdf
+/IJK_CV_site.pdf
+/IJK CV 2025.09.29.pdf
