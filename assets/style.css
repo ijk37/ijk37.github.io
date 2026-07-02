@@ -244,6 +244,26 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
+/* Learning resources */
+.resources { list-style: none; padding: 0; margin: 0; }
+.resources li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.resources li:last-child { border-bottom: none; }
+.resource-link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--accent);
+}
+.resource-desc {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
 /* Stand-alone sub-pages (e.g., Achievements) */
 .subpage {
   max-width: 760px;
