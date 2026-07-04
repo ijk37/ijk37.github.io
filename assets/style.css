@@ -251,22 +251,45 @@ p { margin: 0 0 14px; }
 .award-status { font-weight: 600; }
 .award-status.accepted { color: var(--accent); }
 
-/* Learning resources — same card grid as Research Interests, but each card is a link */
-.resource-list li { padding: 0; background: none; border: none; }
-.resource-list a {
-  --resource-accent: var(--accent);
-  display: block;
-  padding: 13px 16px;
-  background: var(--accent-soft);
+/* Learning resources */
+.resource-tabs {
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 5px solid var(--resource-accent);
-  border-radius: var(--radius);
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.96rem;
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  border-radius: 12px;
 }
-.resource-list a:hover {
+.resource-tabs li { min-width: 0; }
+.resource-tabs a {
+  --resource-accent: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 54px;
+  padding: 12px 15px;
+  background: var(--bg);
+  border: 1px solid transparent;
+  border-bottom: 4px solid var(--resource-accent);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.resource-tabs a::after {
+  content: "\2192";
+  flex-shrink: 0;
+  color: var(--resource-accent);
+  font-weight: 800;
+}
+.resource-tabs a:hover {
+  background: color-mix(in srgb, var(--resource-accent) 8%, var(--bg));
   text-decoration: none;
   color: var(--resource-accent);
   border-color: var(--resource-accent);
@@ -373,6 +396,18 @@ a.topic-card:hover {
   margin-bottom: 20px;
 }
 .back-link:hover { color: var(--accent); text-decoration: none; }
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+}
+.home-link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 .subpage-title {
   font-family: "Newsreader", Georgia, serif;
   font-size: 2.1rem;
@@ -498,6 +533,7 @@ a.topic-card:hover {
   }
   .links a { flex: 1 1 130px; justify-content: center; }
   .interests { grid-template-columns: 1fr; }
+  .resource-tabs { grid-template-columns: 1fr; }
   section { margin-bottom: 36px; }
   .tabs { display: flex; width: 100%; }
   .tab { flex: 1 1 0; padding: 9px 8px; font-size: 0.9rem; }
