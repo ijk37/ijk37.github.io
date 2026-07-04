@@ -272,6 +272,91 @@ p { margin: 0 0 14px; }
   box-shadow: 0 4px 14px rgba(0, 106, 78, 0.18);
 }
 
+/* Learning resource landing pages */
+.hub-page {
+  max-width: 980px;
+}
+.hub-intro {
+  max-width: 760px;
+  margin-bottom: 24px;
+  color: var(--text-muted);
+}
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.topic-card {
+  --card-accent: var(--accent);
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  min-height: 138px;
+  padding: 16px 17px 15px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--card-accent);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+a.topic-card:hover {
+  text-decoration: none;
+  border-color: var(--card-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 106, 78, 0.14);
+}
+.topic-card.is-disabled {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+.topic-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.topic-card.is-disabled .topic-icon {
+  background: var(--bg);
+  color: var(--text-muted);
+}
+.topic-title {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.topic-blurb {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.topic-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.topic-card.is-disabled .topic-status {
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
 /* Stand-alone sub-pages (e.g., Achievements) */
 .subpage {
   max-width: 760px;
@@ -301,6 +386,16 @@ p { margin: 0 0 14px; }
 }
 @media (max-width: 760px) {
   .subpage { padding: 32px 20px; }
+  .topic-grid { grid-template-columns: 1fr; }
+  .topic-card {
+    grid-template-columns: 40px 1fr;
+    min-height: auto;
+    padding: 15px;
+  }
+  .topic-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* Tabbed activity section */
