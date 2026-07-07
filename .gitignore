@@ -14,6 +14,8 @@ cv-src/cv_academic.tex
 /IJK_CV_site.pdf
 /IJK CV 2025.09.29.pdf
 
-# Private application letters (letters of interest) — local only, never published
+# Private application letters & statements — local only, never published
 cv-src/loi_*.tex
+cv-src/rs_*.tex
 /IJK_LOI_*.pdf
+/IJK_RS_*.pdf
