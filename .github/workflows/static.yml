@@ -37,7 +37,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site/assets _site/data-science-ai _site/cyber-security
-          cp index.html achievements.html CNAME _site/
+          cp index.html achievements.html CNAME robots.txt sitemap.xml _site/
           cp data-science-ai/index.html _site/data-science-ai/
           cp cyber-security/index.html _site/cyber-security/
           cp assets/style.css assets/profile.jpg assets/favicon.svg assets/IJK_CV_site.pdf _site/assets/

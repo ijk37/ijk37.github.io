@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ijk37.com/sitemap.xml
