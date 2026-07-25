@@ -37,10 +37,12 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site/assets _site/data-science-ai _site/cyber-security
-          cp index.html achievements.html CNAME robots.txt sitemap.xml _site/
+          cp index.html achievements.html branding-bangladesh.html life-at-usa.html CNAME robots.txt sitemap.xml _site/
           cp data-science-ai/index.html _site/data-science-ai/
           cp cyber-security/index.html _site/cyber-security/
           cp assets/style.css assets/profile.jpg assets/favicon.svg assets/IJK_CV_site.pdf _site/assets/
+          cp -r assets/branding-bd _site/assets/
+          [ -d assets/life-usa ] && cp -r assets/life-usa _site/assets/ || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
