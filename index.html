@@ -220,23 +220,28 @@
       </section>
 
       <section id="activity">
-        <div class="tabs" role="tablist" aria-label="News, publications, and conference activity">
+        <div class="tabs" role="tablist" aria-label="News, publications, conference, and archived activity">
           <button class="tab is-active" id="tab-news" role="tab" aria-controls="panel-news"
             aria-selected="true" tabindex="0">News</button>
           <button class="tab" id="tab-pubs" role="tab" aria-controls="panel-pubs"
             aria-selected="false" tabindex="-1">Publications</button>
           <button class="tab" id="tab-conf" role="tab" aria-controls="panel-conf"
             aria-selected="false" tabindex="-1">Conference</button>
+          <button class="tab" id="tab-archive" role="tab" aria-controls="panel-archive"
+            aria-selected="false" tabindex="-1">Archive</button>
         </div>
 
         <div class="tab-panels">
           <div class="tab-panel is-active" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
           <ul class="news">
+            <li><time>2026</time> Submitted three workshop papers to the ISTHS workshop at IEEE HealthCom 2026 &mdash;
+              on resilient reinforcement learning for the artificial pancreas and an auditable framework for
+              AI-assisted NMR metabolomics.</li>
+            <li><time>2026</time> Paper "Blockchain-Anchored Detection and Recovery for Resilient Reinforcement
+              Learning-Based Cyber-Physical Systems" accepted at the 7th Annual National HBCU Blockchain, FinTech, and
+              AI Conference (Morgan State University); camera-ready submitted.</li>
             <li><time>2026</time> Paper "Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
               Reinforcement Learning CartPole Testbed" published in the AIIoT Conference proceedings.</li>
-            <li><time>2026</time> Submitted paper "Blockchain-Anchored Detection and Recovery for Resilient
-              Reinforcement Learning-Based Cyber-Physical Systems" to the 7th Annual National HBCU Blockchain, FinTech,
-              and AI Conference at Morgan State University.</li>
             <li><time>2026</time> Paper "Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
               Reinforcement Learning CartPole Testbed" presented by Dr. Mohammad Arafatur Rahman at the AIIoT
               Conference in Seattle, WA.</li>
@@ -245,6 +250,76 @@
             <li><time>2026</time> Paper published at the 9th International Conference on Information and Computer
               Technologies (ICICT).</li>
             <li><time>2026</time> Paper accepted for presentation at the AIIoT Conference.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-pubs" role="tabpanel" aria-labelledby="tab-pubs" hidden>
+          <h3 class="pub-group">Peer-Reviewed &amp; Accepted</h3>
+        <ol class="pubs">
+          <li>
+            <span class="pub-title">Detection of Integrity Attacks in Cloud-Based Cyber-Physical Systems (CBCPS)
+              Using Long Short-Term Memory (LSTM) Models</span>
+            <span class="pub-authors">Mohammad Arafatur Rahman, <strong>Imran Jahid Khan</strong>, Fan Wu</span>
+            <span class="pub-venue">Proceedings of the 2026 9th International Conference on Information and Computer
+              Technologies (ICICT), pp. 533&ndash;538, 2026.</span>
+          </li>
+          <li>
+            <span class="pub-title">Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
+              Reinforcement Learning CartPole Testbed</span>
+            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, Maliha Hossain, Mohammad Arafatur Rahman, Fan
+              Wu</span>
+            <span class="pub-venue">AIIoT Conference, 2026 · <span class="pub-status accepted">Published</span></span>
+          </li>
+          <li>
+            <span class="pub-title">Blockchain-Anchored Detection and Recovery for Resilient Reinforcement
+              Learning-Based Cyber-Physical Systems</span>
+            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, Maliha Hossain, Mohammad Arafatur Rahman, Fan
+              Wu</span>
+            <span class="pub-venue">7th Annual National HBCU Blockchain, FinTech, and AI Conference, Morgan State
+              University, 2026 · <span class="pub-status accepted">Accepted</span></span>
+          </li>
+        </ol>
+
+        <h3 class="pub-group">Under Review</h3>
+        <ol class="pubs">
+          <li>
+            <span class="pub-title">Reconstruction-Assisted Resilient Reinforcement Learning for the Artificial
+              Pancreas under CGM Sensor Attacks</span>
+            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, Suriya Tahmim, Maliha Hossain, Mohammad
+              Arafatur Rahman, Fan Wu</span>
+            <span class="pub-venue"><span class="pub-status">Under review</span> · ISTHS Workshop, IEEE HealthCom,
+              2026</span>
+          </li>
+          <li>
+            <span class="pub-title">Evaluating Classical and Quantum Reinforcement Learning Controllers under
+              Meal-Information Uncertainty in Artificial Pancreas Systems</span>
+            <span class="pub-authors">Maliha Hossain, <strong>Imran Jahid Khan</strong>, Mohammad Arafatur Rahman, Fan
+              Wu</span>
+            <span class="pub-venue"><span class="pub-status">Under review</span> · ISTHS Workshop, IEEE HealthCom,
+              2026</span>
+          </li>
+          <li>
+            <span class="pub-title">An Auditable Evidence-Ranking Framework for AI-Assisted NMR Metabolomics in Breast
+              Cancer Research</span>
+            <span class="pub-authors">Suriya Tahmim, <strong>Imran Jahid Khan</strong>, Willard E. Collier</span>
+            <span class="pub-venue"><span class="pub-status">Under review</span> · ISTHS Workshop, IEEE HealthCom,
+              2026</span>
+          </li>
+        </ol>
+        </div>
+
+        <div class="tab-panel" id="panel-conf" role="tabpanel" aria-labelledby="tab-conf" hidden>
+          <ul class="awards">
+          <li>
+            <span class="award-title">Poster — AWS-MLU AI/ML Fall Teaching and Research Symposium &amp; Student Poster
+              Session</span>
+            <span class="award-org">2025</span>
+          </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="panel-archive" role="tabpanel" aria-labelledby="tab-archive" hidden>
+          <ul class="news">
             <li><time>2025</time> Completed the first semester at Tuskegee University with a perfect 4.00/4.00 GPA.
             </li>
             <li><time>2025</time> Presented research poster at the AWS-MLU AI/ML Fall Teaching and Research
@@ -266,48 +341,6 @@
               Land.</li>
             <li><time>2019</time> Joined the Bangladesh Civil Service as Assistant Commissioner &amp; Executive
               Magistrate, Ministry of Public Administration.</li>
-          </ul>
-        </div>
-
-        <div class="tab-panel" id="panel-pubs" role="tabpanel" aria-labelledby="tab-pubs" hidden>
-          <h3 class="pub-group">Peer-Reviewed</h3>
-        <ol class="pubs">
-          <li>
-            <span class="pub-title">Detection of Integrity Attacks in Cloud-Based Cyber-Physical Systems (CBCPS)
-              Using Long Short-Term Memory (LSTM) Models</span>
-            <span class="pub-authors">Mohammad Arafatur Rahman, <strong>Imran Jahid Khan</strong>, Fan Wu</span>
-            <span class="pub-venue">Proceedings of the 2026 9th International Conference on Information and Computer
-              Technologies (ICICT), pp. 533&ndash;538, 2026.</span>
-          </li>
-          <li>
-            <span class="pub-title">Resilience Analysis of Cloud-Controlled Cyber-Physical Systems Using a
-              Reinforcement Learning CartPole Testbed</span>
-            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, Maliha Hossain, Mohammad Arafatur Rahman, Fan
-              Wu</span>
-            <span class="pub-venue">AIIoT Conference, 2026 · <span class="pub-status accepted">Published</span></span>
-          </li>
-        </ol>
-
-        <h3 class="pub-group">Under Review</h3>
-        <ol class="pubs">
-          <li>
-            <span class="pub-title">Blockchain-Anchored Detection and Recovery for Resilient Reinforcement
-              Learning-Based Cyber-Physical Systems</span>
-            <span class="pub-authors"><strong>Imran Jahid Khan</strong>, Maliha Hossain, Mohammad Arafatur Rahman, Fan
-              Wu</span>
-            <span class="pub-venue"><span class="pub-status">Under review</span> · 7th Annual National HBCU Blockchain,
-              FinTech, and AI Conference, Morgan State University, 2026</span>
-          </li>
-        </ol>
-        </div>
-
-        <div class="tab-panel" id="panel-conf" role="tabpanel" aria-labelledby="tab-conf" hidden>
-          <ul class="awards">
-          <li>
-            <span class="award-title">Poster — AWS-MLU AI/ML Fall Teaching and Research Symposium &amp; Student Poster
-              Session</span>
-            <span class="award-org">2025</span>
-          </li>
           </ul>
         </div>
         </div>
