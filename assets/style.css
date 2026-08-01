@@ -598,6 +598,60 @@ a.topic-card:hover {
   color: var(--accent-2);
 }
 
+/* ---------- Accordion (expandable Publications / Conference / News / Archive) ---------- */
+details.accordion {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+details.accordion > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+details.accordion > summary::-webkit-details-marker { display: none; }
+details.accordion > summary::after {
+  content: "\25BE";
+  font-size: 0.85em;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+details.accordion > summary:hover { color: var(--accent); }
+details.accordion[open] > summary {
+  background: var(--accent);
+  color: #fff;
+}
+details.accordion[open] > summary:hover { color: #fff; }
+details.accordion[open] > summary::after {
+  color: #fff;
+  transform: rotate(180deg);
+}
+details.accordion > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.accordion-body {
+  padding: 8px 20px 16px;
+  animation: acc-open 0.22s ease;
+}
+.accordion-body > .pub-group:first-child,
+.accordion-body > .news:first-child,
+.accordion-body > .awards:first-child { margin-top: 0; }
+@keyframes acc-open {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* Footer */
 .site-footer {
   margin-top: 48px;
@@ -641,5 +695,6 @@ a.topic-card:hover {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .tab-panel { animation: none; }
+  .accordion-body { animation: none; }
   .links a { transition: none; }
 }
