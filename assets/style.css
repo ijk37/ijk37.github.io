@@ -65,13 +65,28 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Layout ---------- */
 .layout {
-  max-width: var(--max-width);
+  max-width: 1340px;
   margin: 0 auto;
   padding: 48px 28px;
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 56px;
+  grid-template-columns: 280px minmax(0, 1fr) 240px;
+  gap: 48px;
   align-items: start;
+}
+
+/* Right rail — personal feature cards */
+.rail {
+  position: sticky;
+  top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rail-title {
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 7px;
+  line-height: 1.25;
 }
 
 /* ---------- Sidebar ---------- */
@@ -652,6 +667,69 @@ details.accordion > summary:focus-visible {
   to { opacity: 1; transform: none; }
 }
 
+/* ---------- Feature cards (Branding Bangladesh / Life in USA) ---------- */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3px;
+  min-height: 160px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  color: #fff;
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+}
+.feature-card .fc-title {
+  position: relative;
+  z-index: 1;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.feature-card .fc-sub {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+/* Bangladesh — green field with the red sun */
+.bd-card { background: linear-gradient(160deg, #007a5a, #00553d); }
+.bd-card::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  right: -12px;
+  width: 132px;
+  height: 132px;
+  background: #f42a41;
+  border-radius: 50%;
+  opacity: 0.92;
+}
+/* USA — navy with red/white stripes */
+.usa-card { background: linear-gradient(160deg, #3c3b6e, #26264d); }
+.usa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-20deg,
+      transparent 0 22px,
+      rgba(255, 255, 255, 0.09) 22px 33px,
+      rgba(216, 28, 49, 0.22) 33px 44px);
+}
+
 /* Footer */
 .site-footer {
   margin-top: 48px;
@@ -662,6 +740,30 @@ details.accordion > summary:focus-visible {
 }
 
 /* ---------- Responsive ---------- */
+/* Below 1180px there is no room for a third column — rail drops under the content */
+@media (max-width: 1180px) {
+  .layout {
+    max-width: var(--max-width);
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 56px;
+  }
+  .rail {
+    position: static;
+    grid-column: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .rail-title { flex: 0 0 100%; font-size: 1.45rem; }
+  .rail .feature-card { flex: 1 1 0; }
+}
+
+@media (max-width: 760px) {
+  .rail {
+    grid-column: 1;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 760px) {
   .layout {
     grid-template-columns: 1fr;
@@ -682,6 +784,7 @@ details.accordion > summary:focus-visible {
   .links a { flex: 1 1 130px; justify-content: center; }
   .interests { grid-template-columns: 1fr; }
   .resource-tabs { grid-template-columns: 1fr; }
+  .feature-cards { grid-template-columns: 1fr; }
   section { margin-bottom: 36px; }
   .tabs { display: flex; width: 100%; }
   .tab { flex: 1 1 0; padding: 9px 8px; font-size: 0.9rem; }
