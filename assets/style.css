@@ -205,6 +205,9 @@ p { margin: 0 0 14px; }
   line-height: 1.55;
 }
 
+.research-summary > p { margin: 0; }
+.research-summary > p + p { margin-top: 1.55em; }
+
 /* Research interests */
 .interests {
   list-style: none;
