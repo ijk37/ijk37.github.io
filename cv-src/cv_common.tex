@@ -1,0 +1,211 @@
+%==============================================================
+%  Imran Jahid Khan - Curriculum Vitae (shared content)
+%  Bangladesh-flag theme (green + red) to match ijk37.com.
+% Shared content: compile cv_site.tex or the private cv_academic.tex wrapper.
+% Grade values and the phone line are defined only in the wrappers.
+%==============================================================
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Brand colors (match ijk37.com — Bangladesh flag) ----
+\definecolor{accent}{HTML}{006A4E}   % bottle green (primary)
+\definecolor{accent2}{HTML}{D81C31}  % flag red (highlight)
+\definecolor{dark}{HTML}{16241D}
+\definecolor{muted}{HTML}{586B62}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent,
+  pdftitle={Imran Jahid Khan - Curriculum Vitae}, pdfauthor={Imran Jahid Khan}}
+
+% ---- Section headings ----
+\titleformat{\section}
+  {\color{accent}\bfseries\large}{}{0em}{}[\color{accent}\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% Ragged-right text: no mid-word hyphenation in titles and bullets
+\setlength{\parindent}{0pt}
+\AtBeginDocument{\raggedright}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+% ---- Footer ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}Imran Jahid Khan \textemdash{} Curriculum Vitae \textbullet{} Updated September 2026}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage}
+
+% ---- Helpers ----
+% \position{Title}{Dates}{Org / detail}
+\newcommand{\position}[3]{%
+  \textbf{#1}\hfill{\color{muted}\textit{#2}}\\
+  {\color{dark}#3}\par\vspace{1pt}}
+\newcommand{\pres}{\textsuperscript{\dag}}
+
+\begin{document}
+
+%================= HEADER =================
+\begin{center}
+  {\fontsize{22}{24}\selectfont\bfseries\color{dark} Imran Jahid Khan}\\[4pt]
+  {\color{accent2}\rule{1.4in}{1.4pt}}\\[4pt]
+  {\small
+    \faEnvelope~\href{mailto:jahidmebuet@gmail.com}{jahidmebuet@gmail.com}~~\textbullet~~
+    \phoneline
+    \faLinkedin~\href{https://www.linkedin.com/in/ijk37/}{linkedin.com/in/ijk37}~~\textbullet~~
+    \faGithub~\href{https://github.com/ijk37}{github.com/ijk37}\\[3pt]
+    \faGlobe~\href{https://ijk37.com}{ijk37.com}~~\textbullet~~
+    \faGraduationCap~\href{https://scholar.google.com/citations?user=5VQULPEAAAAJ\&hl=en}{Google Scholar}~~\textbullet~~
+    \faOrcid~\href{https://orcid.org/0009-0007-2666-3354}{0009-0007-2666-3354}~~\textbullet~~
+    \faMapMarker~Tuskegee, AL, USA
+  }
+\end{center}
+\vspace{2pt}
+
+%================= RESEARCH INTERESTS =================
+\section{Research Interests}
+Security and Resilience of Cyber-Physical Systems \textbullet{} Sensor Attacks, Anomaly Detection, and Recovery
+\textbullet{} Robust Reinforcement Learning for Control \textbullet{} Cloud-Controlled and Medical CPS
+\textbullet{} Blockchain-Based Integrity Verification
+
+%================= EDUCATION =================
+\section{Education}
+\position{Tuskegee University, Alabama, USA}{Aug 2025 -- May 2027 (expected)}
+{M.S. in Information Systems and Computer Security\mastersgrade}
+{\small\color{muted}Advisor: Dr.\ Mohammad Arafatur Rahman \par
+\textit{Relevant Coursework:} Information Security; Network Security and Management;
+Data Networks \& Cloud Computing; Data Mining \& Machine Learning; Statistics with R; Data Analytics; Big Data Analytics;
+Database Systems.\par}
+\vspace{3pt}
+\position{Bangladesh University of Engineering \& Technology (BUET), Dhaka}{2011 -- 2016}
+{B.Sc. in Mechanical Engineering\bachelorsgrade}
+{\small\color{muted}Thesis: Wind Turbine Blade Design for Optimum Power Output.\par
+\textit{Mathematical Foundations:} Calculus; Linear Algebra; Ordinary \& Partial Differential Equations;
+Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
+
+%================= RESEARCH EXPERIENCE =================
+\section{Research Experience}
+\position{Graduate Research Assistant}{Aug 2025 -- Present}
+{Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
+\begin{itemize}
+  \item Model sensor-layer attacks (replay, false-data injection, Gaussian observation corruption) on
+  learning-based CPS controllers and build detection-and-recovery defenses that keep closed-loop control
+  stable in simulation.
+  \item Built cloud-controlled reinforcement-learning CartPole testbeds (Q-learning, DQN, PPO); showed that
+  corrupting a single critical state variable (pole angle) degrades control as severely as corrupting the full
+  state, so defenses must be targeted rather than uniform [2]. Developed LSTM-based integrity-attack
+  detection for cloud-based CPS [1].
+  \item Paired a PPO controller with an LSTM-autoencoder anomaly detector and a blockchain-anchored
+  recovery mechanism that deterministically detects replay attacks and restores the most recent verified
+  clean state [3].
+  \item Designed reconstruction-assisted recovery for artificial-pancreas RL control under CGM sensor attacks,
+  combining a residual-LSTM state reconstructor with a safety shield; evaluated glucose-control and risk
+  metrics in the simglucose simulator [4].
+  \item Evaluated classical and quantum RL controllers under meal-information uncertainty in
+  artificial-pancreas systems [5]; contributed to an auditable evidence-ranking framework for AI-assisted
+  NMR metabolomics [6].
+\end{itemize}
+
+%================= PUBLICATIONS =================
+\section{Publications}
+{\small\color{muted}\pres{} denotes presenting author.}\par\vspace{2pt}
+\textbf{\color{muted}\footnotesize PUBLISHED CONFERENCE PAPERS}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=3pt,label={[\arabic*]}]
+  \item M.~A.~Rahman, \textbf{I.~J.~Khan}, and F.~Wu, ``Detection of Integrity Attacks in Cloud-Based
+  Cyber-Physical Systems (CBCPS) Using Long Short-Term Memory (LSTM) Models,'' in \textit{Proc.\ 2026 9th
+  International Conference on Information and Computer Technologies (ICICT)}, pp.~533--538, 2026.
+  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Resilience Analysis of Cloud-Controlled
+  Cyber-Physical Systems Using a Reinforcement Learning CartPole Testbed,'' in \textit{Proc.\ 2026 IEEE World AI
+  IoT Congress (AIIoT)}, pp.~773--779, 2026.
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize ACCEPTED CONFERENCE / WORKSHOP PAPERS}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=3pt,start=3,label={[\arabic*]}]
+  \item \textbf{I.~J.~Khan}\pres, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Blockchain-Anchored Detection and Recovery for
+  Resilient Reinforcement Learning-Based Cyber-Physical Systems,'' \textit{7th Annual National HBCU
+  Blockchain, FinTech, and AI Conference}, 2026.
+  \item \textbf{I.~J.~Khan}\pres, S.~Tahmim, M.~Hossain, M.~A.~Rahman, and F.~Wu, ``Reconstruction-Assisted Resilient
+  Reinforcement Learning for the Artificial Pancreas under CGM Sensor Attacks,''
+  \textit{Proc.\ IEEE International Conference on E-health Networking, Application \& Services (HealthCom)
+  Workshops, ISTHS Workshop}, 2026.
+  \item M.~Hossain, \textbf{I.~J.~Khan}\pres, M.~A.~Rahman, and F.~Wu, ``Evaluating Classical and Quantum Reinforcement
+  Learning Controllers under Meal-Information Uncertainty in Artificial Pancreas Systems,''
+  \textit{Proc.\ IEEE HealthCom Workshops, ISTHS Workshop}, 2026.
+  \item S.~Tahmim, \textbf{I.~J.~Khan}, and W.~E.~Collier, ``An Auditable Evidence-Ranking Framework for
+  AI-Assisted NMR Metabolomics in Breast Cancer Research,'' \textit{Proc.\ IEEE HealthCom Workshops,
+  ISTHS Workshop}, 2026.
+\end{enumerate}
+
+%================= PRESENTATIONS =================
+\section{Presentations}
+\begin{itemize}
+  \item \textbf{Oral, Nov 2026 (scheduled):} paper [3], HBCU Blockchain, FinTech, and AI Conference, Nashville, TN.
+  \item \textbf{Oral, Oct 2026 (scheduled):} papers [4] and [5], ISTHS Workshop, IEEE HealthCom 2026.
+  \item \textbf{Poster, 2025:} \textit{AWS-MLU AI/ML Fall Teaching and Research Symposium \& Student Poster Session}.
+\end{itemize}
+
+%================= HONORS & SCHOLARSHIPS =================
+\section{Honors \& Scholarships}
+\begin{itemize}
+  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ in Information Systems and Computer Security,
+  Tuskegee University, 2025
+  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, for graduate study at
+  Hiroshima University, 2025 \textit{(declined)}
+  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College, 2025 \textit{(declined)}
+  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh, 2024
+  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
+  Project, Government of Bangladesh, 2024 \textit{(declined)}
+\end{itemize}
+
+%================= TEACHING EXPERIENCE =================
+\section{Teaching Experience}
+\position{Graduate Teaching Assistant}{Aug 2025 -- Dec 2025}
+{Introduction to Computer Science, Dept.\ of Computer Science, Tuskegee University}
+
+%================= PROFESSIONAL EXPERIENCE =================
+\needspace{6\baselineskip}
+\section[Professional Experience]{Professional Experience \textnormal{\small\color{muted}(Bangladesh Civil Service)}}
+\position{Deputy Director (Senior Assistant Secretary)}{Sep 2024 -- Jul 2025}
+{Export Promotion Bureau, Ministry of Commerce}
+\begin{itemize}
+  \item Produced data-informed export-policy recommendations and worked with stakeholders to digitize
+  trade-facilitation processes.
+\end{itemize}
+\vspace{3pt}
+\position{Assistant Commissioner (Land) \& Executive Magistrate}{Nov 2022 -- Aug 2024}
+{Upazila Land Office, Patuakhali \& Bhola, Ministry of Land}
+\begin{itemize}
+  \item Managed digital land records and reporting to support land administration; adjudicated land disputes
+  and coordinated field operations.
+\end{itemize}
+\vspace{3pt}
+\position{Assistant Commissioner \& Executive Magistrate}{Apr 2019 -- Nov 2022}
+{Office of the Deputy Commissioner, Cox's Bazar, Ministry of Public Administration}
+\begin{itemize}
+  \item Coordinated disaster-relief and COVID-19 response using ICT; administered public budgets, personnel,
+  and electronic procurement.
+\end{itemize}
+
+%================= SKILLS =================
+\section{Technical Skills}
+\textbf{Programming:} Python, C/C++, R, SQL, MATLAB \\[2pt]
+\textbf{ML / RL:} PyTorch; Q-learning, DQN, PPO; LSTM and LSTM autoencoders; anomaly detection; state reconstruction \\[2pt]
+\textbf{Simulation:} CartPole control testbeds, simglucose (artificial-pancreas simulator) \\[2pt]
+\textbf{Tools:} Git/GitHub, Linux, LaTeX
+
+%================= STANDARDIZED TESTS =================
+\section{Standardized Tests}
+\textbf{GRE:} 322 (Quantitative 167), Dec 2024 \hfill
+\textbf{IELTS Academic:} 7.0, Jan 2024
+
+\end{document}

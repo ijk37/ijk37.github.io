@@ -17,5 +17,9 @@ cv-src/cv_academic.tex
 # Private application letters & statements — local only, never published
 cv-src/loi_*.tex
 cv-src/rs_*.tex
+cv-src/ps_*.tex
 /IJK_LOI_*.pdf
 /IJK_RS_*.pdf
+/IJK_PS_*.pdf
+/IJK_Motivation_*.docx
+/IJK_*.docx
