@@ -43,7 +43,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\footnotesize\color{muted}Imran Jahid Khan \textemdash{} Curriculum Vitae \textbullet{} Updated September 2026}
+\fancyfoot[L]{\footnotesize\color{muted}Imran Jahid Khan \textemdash{} Curriculum Vitae \textbullet{} Updated October 2026}
 \fancyfoot[R]{\footnotesize\color{muted}\thepage}
 
 % ---- Helpers ----
@@ -96,22 +96,20 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \position{Graduate Research Assistant}{Aug 2025 -- Present}
 {Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
 \begin{itemize}
-  \item Model sensor-layer attacks (replay, false-data injection, Gaussian observation corruption) on
-  learning-based CPS controllers and build detection-and-recovery defenses that keep closed-loop control
-  stable in simulation.
-  \item Built cloud-controlled reinforcement-learning CartPole testbeds (Q-learning, DQN, PPO); showed that
-  corrupting a single critical state variable (pole angle) degrades control as severely as corrupting the full
-  state, so defenses must be targeted rather than uniform [2]. Developed LSTM-based integrity-attack
-  detection for cloud-based CPS [1].
-  \item Paired a PPO controller with an LSTM-autoencoder anomaly detector and a blockchain-anchored
-  recovery mechanism that deterministically detects replay attacks and restores the most recent verified
-  clean state [3].
-  \item Designed reconstruction-assisted recovery for artificial-pancreas RL control under CGM sensor attacks,
-  combining a residual-LSTM state reconstructor with a safety shield; evaluated glucose-control and risk
-  metrics in the simglucose simulator [4].
-  \item Evaluated classical and quantum RL controllers under meal-information uncertainty in
-  artificial-pancreas systems [5]; contributed to an auditable evidence-ranking framework for AI-assisted
-  NMR metabolomics [6].
+  \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
+  interacts non-linearly with environmental stress (inclined surface), cutting mean survival time from
+  4.82\,s to 1.44\,s [2].
+  \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
+  noise and randomized replay; temporal processing (LSTM reconstruction, recurrent DQN) gave the strongest,
+  most consistent replay resilience [7].
+  \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
+  replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
+  LunarLander, while unverified local-buffer recovery collapsed performance [3].
+  \item Showed that detect-then-recover fails under CGM sensor attacks on an RL artificial pancreas; designed
+  detector-free residual-LSTM reconstruction with a hypoglycemia-averse shield that lowered hypoglycemia
+  risk under replay, drift, and FDI attacks in simglucose [4].
+  \item Co-authored studies of classical vs.\ quantum RL controllers [5, 8], LSTM-based integrity-attack
+  detection for cloud-based CPS [1], and AI-assisted NMR metabolomics evidence ranking [6].
 \end{itemize}
 
 %================= PUBLICATIONS =================
@@ -212,7 +210,7 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \section{Technical Skills}
 \textbf{Programming:} Python, C/C++, R, SQL, MATLAB \\[2pt]
 \textbf{ML / RL:} PyTorch; Q-learning, DQN, PPO; LSTM and LSTM autoencoders; anomaly detection; state reconstruction \\[2pt]
-\textbf{Simulation:} Gymnasium (CartPole control testbeds), simglucose (artificial-pancreas simulator) \\[2pt]
+\textbf{Simulation:} Gymnasium (CartPole, LunarLander), simglucose (artificial-pancreas simulator) \\[2pt]
 \textbf{Tools:} Git/GitHub, Linux, LaTeX
 
 %================= STANDARDIZED TESTS =================
