@@ -81,14 +81,14 @@ Security and Resilience of Cyber-Physical Systems \textbullet{} Sensor Attacks, 
 \position{Tuskegee University, Alabama, USA}{Aug 2025 -- May 2027 (expected)}
 {M.S. in Information Systems and Computer Security\mastersgrade}
 {\small\color{muted}Advisor: Dr.\ Mohammad Arafatur Rahman \par
-\textit{Relevant Coursework:} Information Security; Network Security and Management;
+\textit{Relevant Coursework:} Programming Language (C++); Information Security; Network Security and Management;
 Data Networks \& Cloud Computing; Data Mining \& Machine Learning; Statistics with R; Data Analytics; Big Data Analytics;
 Database Systems.\par}
 \vspace{3pt}
 \position{Bangladesh University of Engineering \& Technology (BUET), Dhaka}{2011 -- 2016}
 {B.Sc. in Mechanical Engineering\bachelorsgrade}
 {\small\color{muted}Thesis: Wind Turbine Blade Design for Optimum Power Output.\par
-\textit{Mathematical Foundations:} Calculus; Linear Algebra; Ordinary \& Partial Differential Equations;
+\textit{Relevant Coursework:} Computer Programming Language (C); Calculus; Linear Algebra; Ordinary \& Partial Differential Equations;
 Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 
 %================= RESEARCH EXPERIENCE =================
@@ -97,17 +97,18 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 {Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
 \begin{itemize}
   \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
-  interacts non-linearly with environmental stress (inclined surface), cutting mean survival time from
-  4.82\,s to 1.44\,s [2].
+  interacts non-linearly with environmental stress (inclined surface), cutting mean survival time at the
+  steepest incline from 4.82\,s to 1.44\,s [2].
   \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
-  noise and randomized replay; temporal processing (LSTM reconstruction, recurrent DQN) gave the strongest,
-  most consistent replay resilience [7].
+  noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
+  (7.46\,s), beating corruption-aware DQN in all five runs; its edge over recurrent DQN was not significant [7].
   \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
   replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
-  LunarLander, while unverified local-buffer recovery collapsed performance [3].
-  \item Showed that detect-then-recover fails under CGM sensor attacks on an RL artificial pancreas; designed
-  detector-free residual-LSTM reconstruction with a hypoglycemia-averse shield that lowered hypoglycemia
-  risk under replay, drift, and FDI attacks in simglucose [4].
+  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [3].
+  \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
+  detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
+  residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
+  and FDI [4].
   \item Co-authored studies of classical vs.\ quantum RL controllers [5, 8], LSTM-based integrity-attack
   detection for cloud-based CPS [1], and AI-assisted NMR metabolomics evidence ranking [6].
 \end{itemize}
