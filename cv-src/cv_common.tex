@@ -76,6 +76,12 @@ Security and Resilience of Cyber-Physical Systems \textbullet{} Sensor Attacks, 
 \textbullet{} Robust Reinforcement Learning for Control \textbullet{} Cloud-Controlled and Medical CPS
 \textbullet{} Blockchain-Based Integrity Verification
 
+%================= SKILLS =================
+\section{Technical Skills}
+\textbf{Programming \& Tools:} Python, C/C++, R, SQL, MATLAB; Git/GitHub, Linux, LaTeX \\[2pt]
+\textbf{ML / RL:} PyTorch; Q-learning, DQN, PPO; LSTM and LSTM Autoencoders; Anomaly Detection; State Reconstruction \\[2pt]
+\textbf{Simulation:} Gymnasium (CartPole, LunarLander), Simglucose (artificial-pancreas simulator)
+
 %================= EDUCATION =================
 \section{Education}
 \position{Tuskegee University, Alabama, USA}{Aug 2025 -- May 2027 (expected)}
@@ -91,28 +97,9 @@ Database Systems.\par}
 \textit{Relevant Coursework:} Computer Programming Language (C); Calculus; Linear Algebra; Ordinary \& Partial Differential Equations;
 Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 
-%================= RESEARCH EXPERIENCE =================
-\section{Research Experience}
-\position{Graduate Research Assistant}{Aug 2025 -- Present}
-{Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
-\begin{itemize}
-  \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
-  interacts non-linearly with environmental stress (inclined surface), cutting mean survival time at the
-  steepest incline from 4.82\,s to 1.44\,s [2].
-  \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
-  noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
-  (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [7].
-  \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
-  replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
-  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [3].
-  \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
-  detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
-  residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
-  and FDI [4].
-  \item Co-authored studies of classical vs.\ quantum RL controllers [5, 8], DQN robustness to Gaussian sensor
-  noise [9], camera-assisted FDI recovery [10], LSTM-based integrity-attack detection [1], and AI-assisted NMR
-  metabolomics evidence ranking [6].
-\end{itemize}
+%================= STANDARDIZED TESTS =================
+\section{Standardized Tests}
+\textbf{GRE:} 322 (Quantitative 167, Verbal 155, Analytical Writing 3.5), Dec 2024
 
 %================= PUBLICATIONS =================
 \section{Publications}
@@ -161,7 +148,7 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \end{enumerate}
 
 %================= PRESENTATIONS =================
-\section{Presentations}
+\section{Conference Presentations}
 \begin{itemize}
   \item \textbf{Oral, Nov 8--10, 2026 (scheduled):} paper [3], 7th Annual National HBCU Blockchain, FinTech, and AI
   Conference (National FinTech Center, Morgan State University), Nashville, TN.
@@ -170,24 +157,33 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
   \textit{AWS-MLU AI/ML Fall Teaching and Research Symposium \& Student Poster Session}.
 \end{itemize}
 
-%================= HONORS & SCHOLARSHIPS =================
-\section{Honors \& Scholarships}
+%================= RESEARCH EXPERIENCE =================
+\section{Research Experience}
+\position{Graduate Research Assistant}{Aug 2025 -- Present}
+{Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Advisor: Dr.\ Mohammad Arafatur Rahman}
 \begin{itemize}
-  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ program, Tuskegee University, 2025
-  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, Hiroshima University,
-  2025 \textit{(declined)}
-  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College, 2025 \textit{(declined)}
-  \item \textbf{Bangladesh Civil Service (Administration) Cadre}, 37th BCS Examination: merit position 89 of 306 appointees
-  from about 243,000 candidates
-  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh, 2024
-  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
-  Project, Government of Bangladesh, 2024 \textit{(declined)}
+  \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
+  interacts non-linearly with environmental stress (inclined surface), cutting mean survival time at the
+  steepest incline from 4.82\,s to 1.44\,s [2].
+  \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
+  noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
+  (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [7].
+  \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
+  replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
+  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [3].
+  \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
+  detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
+  residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
+  and FDI [4].
+  \item Co-authored studies of classical vs.\ quantum RL controllers [5, 8], DQN robustness to Gaussian sensor
+  noise [9], camera-assisted FDI recovery [10], LSTM-based integrity-attack detection [1], and AI-assisted NMR
+  metabolomics evidence ranking [6].
 \end{itemize}
 
 %================= TEACHING EXPERIENCE =================
 \section{Teaching Experience}
-\position{Graduate Teaching Assistant}{Aug 2025 -- Dec 2025}
-{Introduction to Computer Science, Dept.\ of Computer Science, Tuskegee University}
+\position{Graduate Teaching Assistant, Introduction to Computer Science}{Aug 2025 -- Dec 2025}
+{Dept.\ of Computer Science, Tuskegee University \quad\textbullet\quad Supervisor: Dr.\ Kushagra Kushagra}
 
 %================= PROFESSIONAL EXPERIENCE =================
 \needspace{6\baselineskip}
@@ -213,15 +209,19 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
   and electronic procurement.
 \end{itemize}
 
-%================= SKILLS =================
-\section{Technical Skills}
-\textbf{Programming \& Tools:} Python, C/C++, R, SQL, MATLAB; Git/GitHub, Linux, LaTeX \\[2pt]
-\textbf{ML / RL:} PyTorch; Q-learning, DQN, PPO; LSTM and LSTM Autoencoders; Anomaly Detection; State Reconstruction \\[2pt]
-\textbf{Simulation:} Gymnasium (CartPole, LunarLander), Simglucose (artificial-pancreas simulator)
+%================= HONORS & SCHOLARSHIPS =================
+\section{Honors \& Scholarships}
+\begin{itemize}
+  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ program, Tuskegee University, 2025
+  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, Hiroshima University,
+  2025 \textit{(declined)}
+  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College, 2025 \textit{(declined)}
+  \item \textbf{Bangladesh Civil Service (Administration) Cadre}, 37th BCS Examination: merit position 89 of 306 appointees
+  from about 243,000 candidates
+  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh, 2024
+  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
+  Project, Government of Bangladesh, 2024 \textit{(declined)}
+\end{itemize}
 
-%================= STANDARDIZED TESTS =================
-\section{Standardized Tests}
-\textbf{GRE:} 322 (Quantitative 167), Dec 2024 \hfill
-\textbf{IELTS Academic:} 7.0, Jan 2024
 
 \end{document}
