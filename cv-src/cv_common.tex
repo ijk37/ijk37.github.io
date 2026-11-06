@@ -30,7 +30,7 @@
 % ---- Section headings ----
 \titleformat{\section}
   {\color{accent}\bfseries\large}{}{0em}{}[\color{accent}\vspace{-3pt}\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
+\titlespacing*{\section}{0pt}{5pt}{3pt}
 
 % Ragged-right text: no mid-word hyphenation in titles and bullets
 \setlength{\parindent}{0pt}
@@ -103,8 +103,18 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 
 %================= PUBLICATIONS =================
 \section{Publications}
-\textbf{\color{muted}\footnotesize PUBLISHED CONFERENCE PAPERS}\hfill{\small\color{muted}\pres{} presenting author}
+\textbf{\color{muted}\footnotesize ACCEPTED JOURNAL ARTICLES}\hfill{\small\color{muted}\pres{} presenting author}
 \begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,label={[\arabic*]}]
+  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Camera-Assisted Recovery from False Data Injection
+  Attacks in Cloud-Based Cyber-Physical Systems Using a CartPole Simulation,'' \textit{Journal of Computer and
+  Communications}, 2026.
+  \item M.~Rahman, M.~Hossain, T.~Tasnim, \textbf{I.~J.~Khan}, and F.~Wu, ``Robustness Analysis of Classical and
+  Hybrid Quantum--Classical Models for Breast Cancer Histopathological Image Classification under Gaussian Noise
+  and Blur,'' \textit{Journal of Computer and Communications}, 2026.
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize PUBLISHED CONFERENCE PAPERS}
+\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=3,label={[\arabic*]}]
   \item M.~Rahman, \textbf{I.~J.~Khan}, and F.~Wu, ``Detection of Integrity Attacks in Cloud-Based
   Cyber-Physical Systems (CBCPS) Using Long Short-Term Memory (LSTM) Models,'' in \textit{Proc.\ 2026 9th
   International Conference on Information and Computer Technologies (ICICT)}, pp.~533--538, 2026.
@@ -114,7 +124,7 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \end{enumerate}
 
 \vspace{2pt}\textbf{\color{muted}\footnotesize ACCEPTED CONFERENCE / WORKSHOP PAPERS}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=3,label={[\arabic*]}]
+\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=5,label={[\arabic*]}]
   \item \textbf{I.~J.~Khan}\pres, M.~Hossain, M.~Rahman, and F.~Wu, ``Blockchain-Anchored Detection and Recovery for
   Resilient Reinforcement Learning-Based Cyber-Physical Systems,'' \textit{7th Annual National HBCU
   Blockchain, FinTech, and AI Conference}, National FinTech Center, Morgan State University, 2026.
@@ -135,24 +145,21 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \end{enumerate}
 
 \vspace{2pt}\textbf{\color{muted}\footnotesize SUBMITTED / UNDER REVIEW}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=8,label={[\arabic*]}]
+\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=10,label={[\arabic*]}]
   \item M.~Hossain, \textbf{I.~J.~Khan}, M.~Rahman, and F.~Wu, ``Evaluating Learning Efficiency and
   Computational Trade-Offs in Classical and Quantum Reinforcement Learning Using a CartPole Testbed,'' submitted
   to \textit{IEEE BigData 2026}.
   \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Evaluating DQN-Based Reinforcement Learning
   Robustness to Gaussian Sensor Noise in Cyber-Physical Systems: Training, Reconstruction, and Reward Design,''
   submitted to \textit{IJACSA}.
-  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Camera-Assisted Recovery from False Data Injection
-  Attacks in Cloud-Based Cyber-Physical Systems Using a CartPole Simulation,'' submitted to
-  \textit{J.\ Comput.\ Commun.}
 \end{enumerate}
 
 %================= PRESENTATIONS =================
 \section{Conference Presentations}
 \begin{itemize}
-  \item \textbf{Oral, Nov 8--10, 2026 (scheduled):} paper [3], 7th Annual National HBCU Blockchain, FinTech, and AI
+  \item \textbf{Oral, Nov 8--10, 2026 (scheduled):} paper [5], 7th Annual National HBCU Blockchain, FinTech, and AI
   Conference (National FinTech Center, Morgan State University), Nashville, TN.
-  \item \textbf{Oral, Oct 2026:} papers [4] and [5], ISTHS Workshop, IEEE HealthCom 2026.
+  \item \textbf{Oral, Oct 2026:} papers [6] and [7], ISTHS Workshop, IEEE HealthCom 2026.
   \item \textbf{Poster, 2025:} ``Evaluating Q-Learning Rewards in Noisy Cloud-Based Cyber-Physical Systems.''
   \textit{AWS-MLU AI/ML Fall Teaching and Research Symposium \& Student Poster Session}.
 \end{itemize}
@@ -164,20 +171,21 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 \begin{itemize}
   \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
   interacts non-linearly with environmental stress (inclined surface), cutting mean survival time at the
-  steepest incline from 4.82\,s to 1.44\,s [2].
+  steepest incline from 4.82\,s to 1.44\,s [4].
   \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
   noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
-  (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [7].
+  (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [9].
   \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
   replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
-  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [3].
+  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [5].
   \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
   detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
   residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
-  and FDI [4].
-  \item Co-authored studies of classical vs.\ quantum RL controllers [5, 8], DQN robustness to Gaussian sensor
-  noise [9], camera-assisted FDI recovery [10], LSTM-based integrity-attack detection [1], and AI-assisted NMR
-  metabolomics evidence ranking [6].
+  and FDI [6].
+  \item Co-authored studies of camera-assisted FDI recovery [1], hybrid quantum--classical histopathology image
+  classification under noise and blur [2], LSTM-based integrity-attack detection [3], classical vs.\ quantum RL
+  controllers [7, 10], AI-assisted NMR metabolomics evidence ranking [8], and DQN robustness to Gaussian sensor
+  noise [11].
 \end{itemize}
 
 %================= TEACHING EXPERIENCE =================
@@ -192,7 +200,7 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 {Export Promotion Bureau, Ministry of Commerce}
 \begin{itemize}
   \item Produced data-informed export-policy recommendations and worked with stakeholders to digitize
-  trade-facilitation processes.
+  trade facilitation.
 \end{itemize}
 \vspace{3pt}
 \position{Assistant Commissioner (Land) \& Executive Magistrate}{Nov 2022 -- Aug 2024}
