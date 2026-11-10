@@ -175,9 +175,10 @@ Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
   \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
   noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
   (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [9].
-  \item Combined a PPO controller, an LSTM-autoencoder detector, and a private blockchain ledger that detects
-  replay deterministically and anchors recovery to verified clean states; restored 95.7\% of clean return on
-  LunarLander, while recovery from an unverified local buffer cut CartPole replay return from 324.5 to 69.1 [5].
+  \item Combined a PPO controller, an LSTM-autoencoder detector, and a SHA-256 hash-linked ledger; hash matching
+  caught every replay with zero false matches in 379,396 clean steps, but ledger-anchored recovery raised
+  LunarLander replay return (178.4 to 264.6) and lowered CartPole (411.1 to 376.2, n.s.): perfect detection did
+  not ensure safe recovery [5].
   \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
   detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
   residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
