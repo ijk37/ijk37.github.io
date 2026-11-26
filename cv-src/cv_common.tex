@@ -1,12 +1,12 @@
 %==============================================================
-%  Imran Jahid Khan - Curriculum Vitae (shared content)
+%  Md Imran Jahid Khan - Curriculum Vitae (shared content)
 %  Bangladesh-flag theme (green + red) to match ijk37.com.
 % Shared content: compile cv_site.tex or the private cv_academic.tex wrapper.
 % Grade values and the phone line are defined only in the wrappers.
 %==============================================================
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.55in]{geometry}
+\usepackage[left=0.55in,right=0.55in,top=0.40in,bottom=0.55in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
 \usepackage{xcolor}
@@ -25,7 +25,7 @@
 \definecolor{muted}{HTML}{586B62}
 
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent,
-  pdftitle={Imran Jahid Khan - Curriculum Vitae}, pdfauthor={Imran Jahid Khan}}
+  pdftitle={Md Imran Jahid Khan - Curriculum Vitae}, pdfauthor={Md Imran Jahid Khan}}
 
 % ---- Section headings ----
 \titleformat{\section}
@@ -43,7 +43,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\footnotesize\color{muted}Imran Jahid Khan \textemdash{} Curriculum Vitae \textbullet{} Updated November 2026}
+\fancyfoot[L]{\footnotesize\color{muted}Md Imran Jahid Khan \textemdash{} Curriculum Vitae \textbullet{} Updated November 2026}
 \fancyfoot[R]{\footnotesize\color{muted}\thepage}
 
 % ---- Helpers ----
@@ -54,12 +54,14 @@
 \newcommand{\pres}{\textsuperscript{\dag}}
 % \presnote{...}: a note (e.g., an award) appended to a publication entry
 \newcommand{\presnote}[1]{ {\color{accent}\textit{#1}}}
+\newcommand{\toappear}{ {\color{muted}\mbox{\textit{(to appear)}}}}
 
 \begin{document}
+\enlargethispage{12pt}
 
 %================= HEADER =================
 {\centering
-  {\fontsize{20}{22}\selectfont\bfseries\color{dark} Imran Jahid Khan}\\[1pt]
+  {\fontsize{20}{22}\selectfont\bfseries\color{dark} Md Imran Jahid Khan}\\[1pt]
   {\color{accent2}\rule{1.4in}{1.2pt}}\\[1pt]
   {\small
     \faEnvelope~\href{mailto:jahidmebuet@gmail.com}{jahidmebuet@gmail.com}~~\textbullet~~
@@ -74,22 +76,13 @@
 
 %================= RESEARCH INTERESTS =================
 \section{Research Interests}
-Security and Resilience of Cyber-Physical Systems \textbullet{} Sensor Attacks, Anomaly Detection, and Recovery
-\textbullet{} Robust Reinforcement Learning for Control \textbullet{} Cloud-Controlled and Medical CPS
-\textbullet{} Blockchain-Based Integrity Verification
-
-%================= SKILLS =================
-\section{Technical Skills}
-\textbf{Programming \& Tools:} Python, C/C++, R, SQL, MATLAB; Git/GitHub, Linux, LaTeX \\[2pt]
-\textbf{ML / RL:} PyTorch; Q-learning, DQN, PPO; LSTM and LSTM Autoencoders; Anomaly Detection; State Reconstruction \\[2pt]
-\textbf{Simulation:} Gymnasium (CartPole, LunarLander), Simglucose (Artificial-Pancreas Simulator)
+Security and Resilience of Cyber-Physical Systems \textbullet{} Robust Reinforcement Learning for Control
 
 %================= EDUCATION =================
 \section{Education}
 \position{Tuskegee University, Alabama, USA}{Aug 2025 -- May 2027 (expected)}
 {M.S. in Information Systems and Computer Security\mastersgrade}
-{\small\color{muted}Advisor: Dr.\ Mohammad Arafatur Rahman \par
-\textit{Relevant Coursework:} Programming Language (C++); Information Security; Network Security and Management;
+{\small\color{muted}\textit{Relevant Coursework:} Programming Language (C++); Information Security; Network Security and Management;
 Data Networks \& Cloud Computing; Data Mining \& Machine Learning; Statistics with R; Data Analytics; Big Data Analytics;
 Database Systems.\par}
 \vspace{3pt}
@@ -99,70 +92,6 @@ Database Systems.\par}
 \textit{Relevant Coursework:} Computer Programming Language (C); Calculus; Linear Algebra; Ordinary \& Partial Differential Equations;
 Complex Variables \& Fourier Analysis; Numerical Analysis.\par}
 
-%================= STANDARDIZED TESTS =================
-\section{Standardized Tests}
-\textbf{GRE:} 322 (Quantitative 167, Verbal 155, AWA 3.5), Dec 2024
-
-%================= PUBLICATIONS =================
-\section{Publications}
-\textbf{\color{muted}\footnotesize PUBLISHED CONFERENCE PAPERS}\hfill{\small\color{muted}\pres{} presenting author (oral presentation)}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,label={[\arabic*]}]
-  \item M.~Rahman, \textbf{I.~J.~Khan}, and F.~Wu, ``Detection of Integrity Attacks in Cloud-Based
-  Cyber-Physical Systems (CBCPS) Using Long Short-Term Memory (LSTM) Models,'' in \textit{Proc.\ 2026 9th
-  International Conference on Information and Computer Technologies (ICICT)}, pp.~533--538, 2026,
-  doi:~\href{https://doi.org/10.1145/3803291.3803303}{10.1145/3803291.3803303}.
-  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~Rahman, and F.~Wu, ``Resilience Analysis of Cloud-Controlled
-  Cyber-Physical Systems Using a Reinforcement Learning CartPole Testbed,'' in \textit{Proc.\ 2026 IEEE World AI
-  IoT Congress (AIIoT)}, pp.~773--779, 2026,
-  doi:~\href{https://doi.org/10.1109/AIIoT68874.2026.11569586}{10.1109/AIIoT68874.2026.11569586}.
-  \item \textbf{I.~J.~Khan}\pres, M.~Hossain, M.~Rahman, and F.~Wu, ``Blockchain-Anchored Detection and Recovery for
-  Resilient Reinforcement Learning-Based Cyber-Physical Systems,'' in \textit{Proc.\ 7th National HBCU Blockchain,
-  FinTech \& AI Conference}, pp.~1--15, 2026, doi:~\href{https://doi.org/10.68414/OMVN2247}{10.68414/OMVN2247}.
-  \presnote{\textbf{Best Paper Award}}
-\end{enumerate}
-
-\vspace{2pt}\textbf{\color{muted}\footnotesize ACCEPTED CONFERENCE / WORKSHOP PAPERS}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=4,label={[\arabic*]}]
-  \item \textbf{I.~J.~Khan}\pres, S.~Tahmim, M.~Hossain, M.~Rahman, and F.~Wu, ``Reconstruction-Assisted Resilient
-  Reinforcement Learning for the Artificial Pancreas under CGM Sensor Attacks,''
-  \textit{Proc.\ IEEE International Conference on E-health Networking, Application \& Services (HealthCom)
-  Workshops, ISTHS Workshop}, 2026.
-  \item M.~Hossain, \textbf{I.~J.~Khan}\pres, M.~Rahman, and F.~Wu, ``Evaluating Classical and Quantum Reinforcement
-  Learning Controllers under Meal-Information Uncertainty in Artificial Pancreas Systems,''
-  \textit{Proc.\ IEEE HealthCom ISTHS Workshop}, 2026.
-  \item S.~Tahmim, \textbf{I.~J.~Khan}, and W.~E.~Collier, ``An Auditable Evidence-Ranking Framework for
-  AI-Assisted NMR Metabolomics in Breast Cancer Research,'' \textit{Proc.\ IEEE HealthCom ISTHS Workshop}, 2026.
-  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~Rahman, and F.~Wu, ``Reconstruction-Assisted DQN for Resilient
-  Cloud-Controlled Cyber-Physical Systems against Data Integrity Attacks,'' \textit{2026 IEEE International
-  Conference on Big Data (BigData), 2nd Special Session on Cybersecurity and Telecommunication in the Era of AI},
-  2026.
-\end{enumerate}
-
-\vspace{2pt}\textbf{\color{muted}\footnotesize ACCEPTED JOURNAL ARTICLES}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=8,label={[\arabic*]}]
-  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Camera-Assisted Recovery from False Data Injection
-  Attacks in Cloud-Based Cyber-Physical Systems Using a CartPole Simulation,'' \textit{Journal of Computer and
-  Communications}, 2026.
-  \item M.~Rahman, M.~Hossain, T.~Tasnim, \textbf{I.~J.~Khan}, and F.~Wu, ``Robustness Analysis of Classical and
-  Hybrid Quantum--Classical Models for Breast Cancer Histopathological Image Classification under Gaussian Noise
-  and Blur,'' \textit{Journal of Computer and Communications}, 2026.
-  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Evaluating DQN-Based Reinforcement Learning
-  Robustness to Gaussian Sensor Noise in Cyber-Physical Systems: Training, Reconstruction, and Reward Design,''
-  \textit{International Journal of Advanced Computer Science and Applications (IJACSA)}, 2026.
-\end{enumerate}
-
-\vspace{2pt}\textbf{\color{muted}\footnotesize SUBMITTED / UNDER REVIEW}
-\begin{enumerate}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt,start=11,label={[\arabic*]}]
-  \item M.~Hossain, \textbf{I.~J.~Khan}, M.~Rahman, and F.~Wu, ``Evaluating Learning Efficiency and
-  Computational Trade-Offs in Classical and Quantum Reinforcement Learning Using a CartPole Testbed,'' submitted
-  to \textit{IEEE BigData 2026}.
-\end{enumerate}
-
-%================= PRESENTATIONS =================
-\section{Poster Presentation}
-``Evaluating Q-Learning Rewards in Noisy Cloud-Based Cyber-Physical Systems,'' \textit{AWS-MLU AI/ML Fall Teaching
-and Research Symposium \& Student Poster Session}, 2025.
-
 %================= RESEARCH EXPERIENCE =================
 \section{Research Experience}
 \position{Graduate Research Assistant}{Aug 2025 -- Present}
@@ -170,22 +99,95 @@ and Research Symposium \& Student Poster Session}, 2025.
 \begin{itemize}
   \item Built a cloud-controlled Q-learning CartPole testbed; showed that low-variance observation noise
   interacts non-linearly with environmental stress (inclined surface), cutting mean survival time at the
-  steepest incline from 4.82\,s to 1.44\,s [2].
-  \item Evaluated six DQN training and reconstruction strategies across 240,000 episode records under Gaussian
-  noise and randomized replay; under all-state replay, LSTM reconstruction had the highest mean survival
-  (7.46\,s), beating mixed-attack-aware DQN in all five runs; its edge over recurrent DQN was not significant [7].
+  steepest incline from 4.82\,s to 1.44\,s [C6].
+  \item Compared six DQN strategies with input-matched and Kalman-filter baselines across 330,000 episode records;
+  under replay, LSTM reconstruction was the most consistent learned pipeline (7.59\,s), a frame-stacked DQN
+  matched its mean, and a Kalman filter with a $\chi^2$ detector led but failed under persistent or delayed corruption [C1].
   \item Combined a PPO controller, an LSTM-autoencoder detector, and a SHA-256 hash-linked ledger; hash matching
   caught every replay with zero false matches in 379,396 clean steps, but ledger-anchored recovery raised
   LunarLander replay return (178.4 to 264.6) and lowered CartPole (411.1 to 376.2, n.s.): perfect detection did
-  not ensure safe recovery [3].
+  not ensure safe recovery [C2].
   \item Showed that detect-then-recover fails under CGM attacks on an RL artificial pancreas (exact-match replay
   detection never fired; the windowed detector fired on 62--94\% of clean-reading steps); designed detector-free
   residual-LSTM reconstruction with a safety shield that lowered hypoglycemia risk (LBGI) under replay, drift,
-  and FDI [4].
-  \item Co-authored studies of LSTM-based integrity-attack detection [1], classical vs.\ quantum RL controllers
-  [5, 11], AI-assisted NMR metabolomics evidence ranking [6], camera-assisted FDI recovery [8], hybrid
-  quantum--classical histopathology image classification under noise and blur [9], and DQN robustness to Gaussian
-  sensor noise [10].
+  and FDI [C3].
+  \item Co-authored studies of LSTM-based integrity-attack detection [C7], classical vs.\ quantum RL controllers
+  [C4,~U1], AI-assisted NMR metabolomics evidence ranking [C5], DQN robustness to Gaussian sensor noise [J1],
+  camera-assisted FDI recovery [J2], and hybrid quantum--classical histopathology image classification under
+  noise and blur [J3].
+\end{itemize}
+
+%================= PUBLICATIONS =================
+\section{Publications}
+\textbf{\color{muted}\footnotesize CONFERENCE \& WORKSHOP PAPERS}\hfill{\small\color{muted}\pres{} presenting author (oral presentation)}
+\begin{enumerate}[leftmargin=2.1em,itemsep=1.5pt,topsep=2pt,label={[C\arabic*]}]
+  \item \textbf{I.~J.~Khan}\pres, M.~Hossain, M.~Rahman, and F.~Wu, ``Reconstruction-Assisted DQN for Resilient
+  Cloud-Controlled Cyber-Physical Systems against Data Integrity Attacks,'' in \textit{Proc.\ 2026 IEEE International
+  Conference on Big Data (BigData), 2nd Special Session on Cybersecurity and Telecommunication in the Era of AI},
+  2026.\toappear
+  \item \textbf{I.~J.~Khan}\pres, M.~Hossain, M.~Rahman, and F.~Wu, ``Blockchain-Anchored Detection and Recovery for
+  Resilient Reinforcement Learning-Based Cyber-Physical Systems,'' in \textit{Proc.\ 7th National HBCU Blockchain,
+  FinTech \& AI Conference}, pp.~1--15, 2026, doi:~\href{https://doi.org/10.68414/OMVN2247}{10.68414/OMVN2247}.
+  \presnote{\textbf{Best Paper Award}}
+  \item \textbf{I.~J.~Khan}\pres, S.~Tahmim, M.~Hossain, M.~Rahman, and F.~Wu, ``Reconstruction-Assisted Resilient
+  Reinforcement Learning for the Artificial Pancreas under CGM Sensor Attacks,'' in
+  \textit{Proc.\ IEEE International Conference on E-health Networking, Application \& Services (HealthCom)
+  Workshops, ISTHS Workshop}, 2026.\toappear
+  \item M.~Hossain, \textbf{I.~J.~Khan}\pres, M.~Rahman, and F.~Wu, ``Evaluating Classical and Quantum Reinforcement
+  Learning Controllers under Meal-Information Uncertainty in Artificial Pancreas Systems,'' in
+  \textit{Proc.\ IEEE HealthCom ISTHS Workshop}, 2026.\toappear
+  \item S.~Tahmim, \textbf{I.~J.~Khan}, and W.~E.~Collier, ``An Auditable Evidence-Ranking Framework for
+  AI-Assisted NMR Metabolomics in Breast Cancer Research,'' in \textit{Proc.\ IEEE HealthCom ISTHS Workshop},
+  2026.\toappear
+  \item \textbf{I.~J.~Khan}, M.~Hossain, M.~Rahman, and F.~Wu, ``Resilience Analysis of Cloud-Controlled
+  Cyber-Physical Systems Using a Reinforcement Learning Cartpole Testbed,'' in \textit{Proc.\ 2026 IEEE World AI
+  IoT Congress (AIIoT)}, pp.~773--779, 2026,
+  doi:~\href{https://doi.org/10.1109/AIIoT68874.2026.11569586}{10.1109/AIIoT68874.2026.11569586}.
+  \item M.~Rahman, \textbf{I.~J.~Khan}, and F.~Wu, ``Detection of Integrity Attacks in Cloud-Based
+  Cyber-Physical Systems (CBCPS) Using Long Short-Term Memory (LSTM) Models,'' in \textit{Proc.\ 2026 9th
+  International Conference on Information and Computer Technologies (ICICT)}, pp.~533--538, 2026,
+  doi:~\href{https://doi.org/10.1145/3803291.3803303}{10.1145/3803291.3803303}.
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize JOURNAL ARTICLES}
+\begin{enumerate}[leftmargin=2.1em,itemsep=1.5pt,topsep=2pt,label={[J\arabic*]}]
+  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Evaluating DQN-Based Reinforcement Learning
+  Robustness to Gaussian Sensor Noise in Cyber-Physical Systems: Training, Reconstruction, and Reward Design,''
+  \textit{International Journal of Advanced Computer Science and Applications (IJACSA)}, 2026.\toappear
+  \item M.~Rahman, \textbf{I.~J.~Khan}, M.~Hossain, and F.~Wu, ``Camera-Assisted Recovery from False Data Injection
+  Attacks in Cloud-Based Cyber-Physical Systems Using a CartPole Simulation,'' \textit{Journal of Computer and
+  Communications}, vol.~14, no.~11, pp.~240--263, 2026, doi:~\href{https://doi.org/10.4236/jcc.2026.1411011}{10.4236/jcc.2026.1411011}.
+  \item M.~Rahman, M.~Hossain, T.~Tasnim, \textbf{I.~J.~Khan}, and F.~Wu, ``Robustness Analysis of Classical and
+  Hybrid Quantum--Classical Models for Breast Cancer Histopathological Image Classification under Gaussian Noise
+  and Blur,'' \textit{Journal of Computer and Communications}, vol.~14, no.~11, pp.~264--286, 2026, doi:~\href{https://doi.org/10.4236/jcc.2026.1411012}{10.4236/jcc.2026.1411012}.
+\end{enumerate}
+
+\vspace{2pt}\textbf{\color{muted}\footnotesize UNDER REVIEW}
+\begin{enumerate}[leftmargin=2.1em,itemsep=1.5pt,topsep=2pt,label={[U\arabic*]}]
+  \item M.~Hossain, \textbf{I.~J.~Khan}, M.~Rahman, and F.~Wu, ``Evaluating Learning Efficiency and
+  Computational Trade-Offs in Classical and Quantum Reinforcement Learning Using a CartPole Testbed,'' submitted
+  to the \textit{Q-STRIDE 2026 Workshop, IEEE BigData 2026}.
+\end{enumerate}
+
+%================= PRESENTATIONS =================
+\section{Poster Presentation}
+``Evaluating Q-Learning Rewards in Noisy Cloud-Based Cyber-Physical Systems,'' \textit{AWS-MLU AI/ML Fall Teaching
+and Research Symposium \& Student Poster Session}, 2025.
+
+%================= HONORS & SCHOLARSHIPS =================
+\section{Honors \& Scholarships}
+\begin{itemize}
+  \item \textbf{Best Paper Award}, 7th Annual National HBCU Blockchain, FinTech, and AI Conference, 2026, for paper [C2]
+  \item \textbf{Eminent Scholar \& Honor Roll}, Tuskegee University, 2025--26 academic year
+  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ program, Tuskegee University, 2025
+  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, Hiroshima University,
+  2025 \textit{(declined)}
+  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College, 2025 \textit{(declined)}
+  \item \textbf{Bangladesh Civil Service (Administration) Cadre}, 37th BCS Examination: merit position 89 of 306 appointees
+  from about 243,000 candidates
+  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh, 2024
+  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
+  Project, Government of Bangladesh, 2024 \textit{(declined)}
 \end{itemize}
 
 %================= TEACHING EXPERIENCE =================
@@ -216,21 +218,14 @@ and Research Symposium \& Student Poster Session}, 2025.
   and electronic procurement.
 \end{itemize}
 
-%================= HONORS & SCHOLARSHIPS =================
-\section{Honors \& Scholarships}
-\begin{itemize}
-  \item \textbf{Best Paper Award}, 7th Annual National HBCU Blockchain, FinTech, and AI Conference, 2026, for paper [3]
-  \item \textbf{Eminent Scholar \& Honor Roll}, Tuskegee University, 2025--26 academic year
-  \item \textbf{Full Scholarship (Graduate Assistantship)}, M.S.\ program, Tuskegee University, 2025
-  \item \textbf{Japan Human Resources Development Scholarship (JDS)}, Government of Japan, Hiroshima University,
-  2025 \textit{(declined)}
-  \item \textbf{Full Scholarship}, M.A.\ in Policy Economics, Williams College, 2025 \textit{(declined)}
-  \item \textbf{Bangladesh Civil Service (Administration) Cadre}, 37th BCS Examination: merit position 89 of 306 appointees
-  from about 243,000 candidates
-  \item \textbf{Prime Minister's Fellowship}, Government of Bangladesh, 2024
-  \item \textbf{Foreign Master's Scholarship}, ``Capacity Building of BCS Administration Academy (2nd Revised)''
-  Project, Government of Bangladesh, 2024 \textit{(declined)}
-\end{itemize}
+%================= SKILLS =================
+\section{Technical Skills}
+\textbf{Programming \& Tools:} Python, C/C++, R, SQL, MATLAB; Git/GitHub, Linux, LaTeX \\[2pt]
+\textbf{ML / RL:} PyTorch, Scikit-learn; Q-learning, DQN, PPO; LSTM Autoencoders; Anomaly Detection; State Reconstruction \\[2pt]
+\textbf{Simulation:} Gymnasium (CartPole, LunarLander), Simglucose (Artificial-Pancreas Simulator)
 
+%================= STANDARDIZED TESTS =================
+\section{Standardized Tests}
+\textbf{GRE:} 322 (Quantitative 167, Verbal 155, AWA 3.5), Dec 2024
 
 \end{document}
